@@ -35,17 +35,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Layout Container */
-        .main-content-container {
-            background: var(--card-bg) !important;
-            max-width: 1000px !important;
-            margin: 60px auto 100px auto !important;
-            padding: 70px 90px !important;
-            border-radius: 24px !important;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.8) !important;
-        }
-
         /* Paragraphs and Text */
         p {
             font-size: 1.15rem;
@@ -245,7 +234,104 @@
             margin: 0 !important;
             padding-bottom: 0 !important;
         }
-    </style>
+    
+        /* Transparent wrapper for the whole page below navbar */
+        .main-content-container {
+            background: transparent !important;
+            max-width: 1000px !important;
+            margin: 40px auto 80px auto !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        /* Hero Section applied globally */
+        .hero-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .hero-cover {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background: var(--dark-slate);
+        }
+        
+        .hero-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0 !important;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+        
+        .hero-profile {
+            margin-top: -85px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-profile img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 8px solid #ffffff;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+            margin: 0 auto !important;
+            background: #ffffff;
+        }
+        
+        .hero-text {
+            padding: 20px 50px 50px 50px;
+        }
+        
+        .hero-name {
+            font-size: 2.6rem !important;
+            font-weight: 800 !important;
+            color: var(--text-heading) !important;
+            margin-top: 15px !important;
+            margin-bottom: 5px !important;
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+        }
+        
+        .hero-title {
+            font-size: 1.3rem !important;
+            color: var(--primary-blue) !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.02em;
+        }
+        
+        .hero-bio {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center !important;
+            line-height: 1.7;
+        }
+
+        /* The actual white card holding the documentation content */
+        .page-content-card {
+            background: var(--card-bg);
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+</style>
 </head>
 
 
@@ -269,7 +355,104 @@
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
+  
+        /* Transparent wrapper for the whole page below navbar */
+        .main-content-container {
+            background: transparent !important;
+            max-width: 1000px !important;
+            margin: 40px auto 80px auto !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        /* Hero Section applied globally */
+        .hero-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .hero-cover {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            background: var(--dark-slate);
+        }
+        
+        .hero-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0 !important;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+        
+        .hero-profile {
+            margin-top: -85px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-profile img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 8px solid #ffffff;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+            margin: 0 auto !important;
+            background: #ffffff;
+        }
+        
+        .hero-text {
+            padding: 20px 50px 50px 50px;
+        }
+        
+        .hero-name {
+            font-size: 2.6rem !important;
+            font-weight: 800 !important;
+            color: var(--text-heading) !important;
+            margin-top: 15px !important;
+            margin-bottom: 5px !important;
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+        }
+        
+        .hero-title {
+            font-size: 1.3rem !important;
+            color: var(--primary-blue) !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.02em;
+        }
+        
+        .hero-bio {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center !important;
+            line-height: 1.7;
+        }
+
+        /* The actual white card holding the documentation content */
+        .page-content-card {
+            background: var(--card-bg);
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+</style>
 </head>
 <body>
 
@@ -644,10 +827,12 @@ OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK mpirun program</code></pre>
 <p>Be mindful that while slurm will use the requested node, other nodes may also be used if the resources you ask for exceed the requested nodes resources. If you want to <strong>only</strong> use the requested node, combine <em>--nodelist</em> with <em>--exclude</em>:</p>
 <pre><code>#SBATCH --nodelist ibrain-gpu01
 #SBATCH --exclude ibrain-node[01-12]</code></pre>
+</div>
 </body>
 </html>
 
 
 		<br><hr><br>
-	</body>
+	</div>
+</body>
 </html>
