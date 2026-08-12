@@ -21,4 +21,4 @@ The website is actively deployed and hosted via GitHub Pages.
 ---
 
 ## 📧 Contact
-**Nasir Mahmood Abbasi** | GitHub: [@nmabbasi](https://github.com/nmabbasi)
+**Nasir Mahmood Abbasi, PhD** | GitHub: [@nmabbasi](https://github.com/nmabbasi)
