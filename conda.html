@@ -102,9 +102,9 @@
 
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
                           <li role="presentation"> <a role="menuitem" tabindex="-1" href="connections.html">Connection</a></li>
-                          <li role="presentation"> <a role="menuitem" tabindex="-1"href="BC.html">Basic commands</a></li>
+                          <li role="presentation"> <a role="menuitem" tabindex="-1" href="BC.html">Basic commands</a></li>
                           <li role="presentation"> <a role="menuitem" tabindex="-1" href="ss.html">Submission Scripts</a></li>
-                          <li role="presentation"> <a role="menuitem" tabindex="-1"href="CM.html">Custom Module</a></li>
+                          <li role="presentation"> <a role="menuitem" tabindex="-1" href="CM.html">Custom Module</a></li>
                           <li role="presentation"> <a role="menuitem" tabindex="-1" href="conda.html">Conda on a Cluster</a></li>
 
                       </ul>
@@ -201,7 +201,7 @@
    </code></pre></div>
    <br>
    <p dir="auto"><strong>3.</strong> To install Conda, we first need to find the proper installer on the <a href="https://docs.conda.io/en/latest/miniconda.html" rel="nofollow"><strong>website</strong></a>. We will be installing Miniconda instead of Anaconda since it only contains the essentials and tends to run faster. Right-click and copy the link address for the Miniconda Linux 64-bit installer that uses Python 3.7.</p>
-   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/um-dang/conda_on_the_cluster/blob/master/images/miniconda_installer.png"><img src="miniconda_installer.png" alt="Image of Miniconda Linux installers" style="max-width: 100%;"></a></p>
+   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="miniconda_installer.png"><img src="miniconda_installer.png" alt="Image of Miniconda Linux installers" style="max-width: 100%;"></a></p>
    <br>
    <p dir="auto"><strong>4.</strong> Return to your terminal and use <code>wget</code> to download the installation script to your home folder on the cluster.</p>
    <div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"><pre class="notranslate"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -336,10 +336,10 @@
    <p dir="auto"><strong>6.</strong> To add new packages (in this case <code>mothur</code>), we can search for them on <a href="https://anaconda.org/" rel="nofollow"><strong>Anaconda Cloud</strong></a>. Using Anaconda Cloud, we can find which channels we can retrieve <code>mothur</code> from, which versions are available, and a lot of other useful information.</p>
    <br>
    <p dir="auto">When we search for <code>mothur</code>, we can see that it's available from multiple channels but we'll use Bioconda specifically.</p>
-   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/um-dang/conda_on_the_cluster/blob/master/images/anaconda_mothur_search_results.png"><img src="anaconda_mothur_search_results.png" alt="Image showing mothur available from multiple channels" style="max-width: 100%;"></a></p>
+   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="anaconda_mothur_search_results.png"><img src="anaconda_mothur_search_results.png" alt="Image showing mothur available from multiple channels" style="max-width: 100%;"></a></p>
    <br>
    <p dir="auto"><strong>7.</strong> If we click on the Bioconda version, we'll be taken to the information page for <code>mothur</code> where we can see details about versions, metadata, and most importantly for us, installation instructions.</p>
-   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/um-dang/conda_on_the_cluster/blob/master/images/anaconda_mothur_package_page.png"><img src="anaconda_mothur_package_page.png" alt="Image of bioconda/mothur package page" style="max-width: 100%;"></a></p>
+   <p dir="auto"><a target="_blank" rel="noopener noreferrer" href="anaconda_mothur_package_page.png"><img src="anaconda_mothur_package_page.png" alt="Image of bioconda/mothur package page" style="max-width: 100%;"></a></p>
    <br>
    <p dir="auto"><strong>8.</strong> Copy the installation code for <code>mothur</code>, paste it into your terminal, and run the installation. By specifying <code>-c</code> during the install, we can tell Conda which channel to use. This is particularly important when downloading packages that have multiple copies on multiple channels.</p>
    <div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="conda install -c bioconda mothur"><pre class="notranslate"><code>conda install -c bioconda mothur
