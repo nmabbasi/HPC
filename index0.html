@@ -25,22 +25,22 @@
 <title>
 HOWTO
 </title>
-<h1 id="questions-requests"><span class="header-section-number">1</span> Questions / requests</h1>
+<h1 id="questions-requests">Questions / requests</h1>
 <p>Send an email to <em>yann.jullian<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em>.</p>
-<h1 id="connection"><span class="header-section-number">2</span> Connection</h1>
-<h2 id="ssh-keys"><span class="header-section-number">2.1</span> SSH keys</h2>
+<h1 id="connection">Connection</h1>
+<h2 id="ssh-keys">SSH keys</h2>
 <p>Access is not available with a password, only with SSH keys. In short. We create a pair of keys, one public, one private. The public key is saved on the login node and the private key stays on the user’s host. Connection only works if private and public keys match.</p>
-<h2 id="linux-mac"><span class="header-section-number">2.2</span> Linux / mac</h2>
-<h3 id="generating-a-pair-of-keys"><span class="header-section-number">2.2.1</span> Generating a pair of keys</h3>
+<h2 id="linux-mac">Linux / mac</h2>
+<h3 id="generating-a-pair-of-keys">Generating a pair of keys</h3>
 <p>The following command may require a package install. It’s called <em>openssh-client</em> on debian/ubuntu. Also <em>esmeralda</em> is the name of the key. You can name it whatever you want, but you have to stay consistent with the <em>config</em> file (few sections below).</p>
 <pre><code>ssh-keygen -t rsa -f esmeralda</code></pre>
 <p>This asks for a <em>passphrase</em> twice and creates 2 files: <em>esmeralda</em> and <em>esmeralda.pub</em>. The first one is the private key, the second one is the public key.</p>
-<h3 id="what-to-do-with-the-keys"><span class="header-section-number">2.2.2</span> What to do with the keys</h3>
+<h3 id="what-to-do-with-the-keys">What to do with the keys</h3>
 <p>Send only the public key to one of the administrators: <em>yann.jullian<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em> or <em>olivier.thibault<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em>. Keep the public key somewhere, for example in <em>~/.ssh/</em>.</p>
 <p>The private key must be in the <em>~/.ssh/</em> folder (which must be created if it does not exist). Note that every host destined to connect to the cluster will require this private key (along with the <em>config</em> file, see below).</p>
-<h3 id="connecting-with-ssh"><span class="header-section-number">2.2.3</span> Connecting with SSH</h3>
+<h3 id="connecting-with-ssh">Connecting with SSH</h3>
 <p>If you want to run graphical applications from outside the university’s network, see <a href="#connecting-with-nx">Connecting with NX</a>. If you’re not a console enthusiast and wish to have a graphical desktop, also see <a href="#connecting-with-nx">Connecting with NX</a>.</p>
-<h4 id="from-inside-the-universitys-network"><span class="header-section-number">2.2.3.1</span> From inside the university’s network</h4>
+<h4 id="from-inside-the-universitys-network">From inside the university’s network</h4>
 <p>Add these lines to the <em>~/.ssh/config</em> file, replacing <em>LOGIN</em> by the login name the administrator gave you:</p>
 <pre><code>Host esmeralda
     Hostname 10.195.17.215
@@ -51,7 +51,7 @@ HOWTO
 <p>But the following will <strong>not</strong> work, because the <em>IdentityFile</em> option will not be used:</p>
 <pre><code>    ssh LOGIN@10.195.17.215</code></pre>
 <p>The alias <em>esmeralda</em> can be changed to anything you want. The <em>IdentityFile</em> line tells <em>ssh</em> to connect using the given private key.</p>
-<h4 id="from-outside-the-universitys-network"><span class="header-section-number">2.2.3.2</span> From outside the university’s network</h4>
+<h4 id="from-outside-the-universitys-network">From outside the university’s network</h4>
 <p>Request VPN access to <em>olivier.thibault<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em>, then follow the instructions given <a href="https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET">here</a>.</p>
 <p>If you are anti-<em>gnome</em> or anti-<em>network-manager</em>, you can also</p>
 <ul>
@@ -62,18 +62,18 @@ HOWTO
 <p>openvpn vpn-univ-TCP-443.ovpn</p></li>
 </ul>
 <p>Once connected, refer to the previous section.</p>
-<h2 id="windows"><span class="header-section-number">2.3</span> Windows</h2>
+<h2 id="windows">Windows</h2>
 <p>Download <a href="https://download.mobatek.net/1102018093083521/MobaXterm_Installer_v11.0.zip"><em>MobaXterm</em></a> and install it.</p>
-<h3 id="generating-a-pair-of-keys-1"><span class="header-section-number">2.3.1</span> Generating a pair of keys</h3>
+<h3 id="generating-a-pair-of-keys-1">Generating a pair of keys</h3>
 <p>Run <em>MobaXterm</em>, click on <em>Start local terminal</em> and run:</p>
 <pre><code>ssh-keygen -t rsa -f esmeralda</code></pre>
 <p>This asks for a <em>passphrase</em> twice and creates 2 files: <em>esmeralda</em> and <em>esmeralda.pub</em>. The first one is the private key, the second one is the public key. These two files must be in the <em>C:\Users\XXX\Documents\MobaXterm\home\</em> (<em>XXX</em> being your user name) folder.</p>
-<h3 id="what-to-do-with-the-keys-1"><span class="header-section-number">2.3.2</span> What to do with the keys</h3>
+<h3 id="what-to-do-with-the-keys-1">What to do with the keys</h3>
 <p>Send only the public key to one of the administrators: <em>yann.jullian<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em> or <em>olivier.thibault<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em>. Keep the keys where they are.</p>
 <p>Note that every host destined to connect to the cluster will require this private key.</p>
-<h3 id="connecting-with-ssh-1"><span class="header-section-number">2.3.3</span> Connecting with SSH</h3>
+<h3 id="connecting-with-ssh-1">Connecting with SSH</h3>
 <p>If you want to run graphical applications from outside the university’s network, see <a href="#connecting-with-nx">Connecting with NX</a>. If you’re not a console enthusiast and wish to have a graphical desktop, also see <a href="#connecting-with-nx">Connecting with NX</a>.</p>
-<h4 id="from-inside-the-universitys-network-1"><span class="header-section-number">2.3.3.1</span> From inside the university’s network</h4>
+<h4 id="from-inside-the-universitys-network-1">From inside the university’s network</h4>
 <p>In the <em>MobaXterm</em> window.</p>
 <ul>
 <li>Click on <em>Session</em> (upper left corner), then <em>SSH</em> (same),</li>
@@ -83,12 +83,12 @@ HOWTO
 <li>Click <em>OK</em>.</li>
 <li>A new session should appear in the left panel, double-click it to connect.</li>
 </ul>
-<h4 id="from-outside-the-universitys-network-1"><span class="header-section-number">2.3.3.2</span> From outside the university’s network</h4>
+<h4 id="from-outside-the-universitys-network-1">From outside the university’s network</h4>
 <p>Request VPN access to <em>olivier.thibault<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em>, then follow the instructions given <a href="https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET">here</a>.</p>
 <p>Once connected, refer to the previous section.</p>
-<h3 id="file-transfer"><span class="header-section-number">2.3.4</span> File transfer</h3>
+<h3 id="file-transfer">File transfer</h3>
 <p>Once connected with <em>MobaXterm</em>, one can drag and drop files in the left panel.</p>
-<h2 id="connecting-with-nx"><span class="header-section-number">2.4</span> Connecting with NX</h2>
+<h2 id="connecting-with-nx">Connecting with NX</h2>
 <p>Install <em>x2goclient</em>. It may be a package for your linux/mac distribution, or it can be downloaded (also for windows) <a href="https://wiki.x2go.org/doku.php/download:start">here</a>.</p>
 <ul>
 <li>Click on <em>Session</em>, then <em>New session…</em>.</li>
@@ -104,8 +104,8 @@ HOWTO
 <li>Click <em>Ok</em>. The session should appear in the right panel. Click on it to connect.</li>
 </ul>
 <p>If you are outside the university’s network, you must first connect to the VPN (see <a href="#depuis-lext&eacuterieur-du-r&eacuteseau">linux/mac</a> or <a href="#depuis-lext&eacuterieur-du-r&eacuteseau-1">windows</a>).</p>
-<h1 id="basic-commands"><span class="header-section-number">3</span> Basic commands</h1>
-<h2 id="modules"><span class="header-section-number">3.1</span> Modules</h2>
+<h1 id="basic-commands">Basic commands</h1>
+<h2 id="modules">Modules</h2>
 <p>Some programs are only available through modules: you need to load modules to use them. As an example, if you want to compile MPI programs with <em>mpic++</em>, you’ll have to load the correct module:</p>
 <pre><code>module load mpi/openmpi-x86_64</code></pre>
 <p>As always,</p>
@@ -121,7 +121,7 @@ module unload X</code></pre>
 <pre><code>module purge</code></pre>
 <p>unloads all modules.</p>
 <p>Don’t forget to load the appropriate modules inside submission scripts (see <a href="#writing-a-submission-script">Writing a submission script</a>). These inside-script module loads are usually preceded by <em>module purge</em>.</p>
-<h2 id="listing-partitions-and-nodes"><span class="header-section-number">3.2</span> Listing partitions and nodes</h2>
+<h2 id="listing-partitions-and-nodes">Listing partitions and nodes</h2>
 <pre><code>sinfo</code></pre>
 <p>The <em>STATE</em> column gives the states of the nodes given in the <em>NODELIST</em> column and may take (among others) the following values:</p>
 <ul>
@@ -136,15 +136,15 @@ module unload X</code></pre>
 <p>Also, the following command will display the characteristics of each node:</p>
 <pre><code>sinfo --long --Node</code></pre>
 <p>The option <em>-p</em> allows restricting to the nodes of a single partition. The important columns of the output are <em>CPUS</em>, which gives the maximum number of CPUs that can be allocated, and <em>Memory</em>, which gives the maximum available memory in Megabytes.</p>
-<h2 id="listing-submitted-jobs"><span class="header-section-number">3.3</span> Listing submitted jobs</h2>
+<h2 id="listing-submitted-jobs">Listing submitted jobs</h2>
 <pre><code>squeue</code></pre>
 <p>If you want to see only yours:</p>
 <pre><code>squeue -u `whoami`</code></pre>
 <p>The <em>ST</em> column is for the state of the job. You’ll usually see either <em>R</em> for running or <em>PD</em> for pending.</p>
-<h2 id="partitions-nodes-and-jobs-in-a-gui"><span class="header-section-number">3.4</span> Partitions, nodes and jobs in a GUI</h2>
+<h2 id="partitions-nodes-and-jobs-in-a-gui">Partitions, nodes and jobs in a GUI</h2>
 <p>If X is activated (see section <a href="#running-a-gui">Running a GUI</a>), one can also run:</p>
 <pre><code>sview&amp;</code></pre>
-<h2 id="running-tasks"><span class="header-section-number">3.5</span> Running tasks</h2>
+<h2 id="running-tasks">Running tasks</h2>
 <p>There are two ways to run tasks on nodes: submit a job (section <a href="#submitting-a-job">Submitting a job</a>) or start an interactive session (section <a href="#running-an-interactive-session">Running an interactive session</a>). Interactive sessions should only be used in two cases:</p>
 <ul>
 <li>you want to run a GUI,</li>
@@ -152,7 +152,7 @@ module unload X</code></pre>
 </ul>
 <p>In all other cases, it is better to submit a job script. The reason is that you need to allocate resources when starting an interactive session. By nature, there is usually downtime in interactive sessions (modifying scripts/programs, or not realising that the task has completed and letting it idle), and during this downtime, the resources you allocated and are currently not using are also unavailable to the other cluster users.</p>
 <p>If you struggle with the script, send an email to <em>yann.jullian<span style="display:none">foo</span><span class="citation" data-cites="univ-tours.fr">@univ-tours.fr</span></em> and use an interactive session in the meantime.</p>
-<h2 id="running-an-interactive-session"><span class="header-section-number">3.6</span> Running an interactive session</h2>
+<h2 id="running-an-interactive-session">Running an interactive session</h2>
 <p>You can only <em>ssh</em> directly onto a node if you have one job active on it. However, a similar result can be obtained by running:</p>
 <pre><code>srun --partition=ibrain --ntasks=1 --cpus-per-task=12 --mem=12G --pty /bin/bash -l</code></pre>
 <p>The options you can give there are mostly the same as the <em>sbatch</em> option (see <a href="#writing-a-submission-script">Writing a submission script</a>), and they specify resource allocation. The <em>--pty /bin/bash -l</em> part tells slurm to open a console. From there, you can execute the programs you want.</p>
@@ -162,11 +162,11 @@ module unload X</code></pre>
 <p>After relogging or running</p>
 <pre><code>source ~/.bashrc</code></pre>
 <p>you’ll be able to simply type <em>interactive</em> to start an interactive session.</p>
-<h2 id="running-a-gui"><span class="header-section-number">3.7</span> Running a GUI</h2>
-<h3 id="if-you-connect-with-nx"><span class="header-section-number">3.7.1</span> If you connect with NX</h3>
+<h2 id="running-a-gui">Running a GUI</h2>
+<h3 id="if-you-connect-with-nx">If you connect with NX</h3>
 <p>Nothing more to do.</p>
-<h3 id="if-you-connect-with-ssh"><span class="header-section-number">3.7.2</span> If you connect with SSH</h3>
-<h4 id="linux-mac-1"><span class="header-section-number">3.7.2.1</span> Linux / mac</h4>
+<h3 id="if-you-connect-with-ssh">If you connect with SSH</h3>
+<h4 id="linux-mac-1">Linux / mac</h4>
 <p>Either give the <em>-X</em> option to the <em>ssh</em> command:</p>
 <pre><code>ssh -X esmeralda</code></pre>
 <p>or add <em>ForwardX11 yes</em> in your <em>~/.ssh/config</em> :</p>
@@ -175,25 +175,25 @@ module unload X</code></pre>
     User LOGIN
     ForwardX11 yes
     IdentityFile ~/.ssh/esmeralda</code></pre>
-<h4 id="mac"><span class="header-section-number">3.7.2.2</span> Mac</h4>
+<h4 id="mac">Mac</h4>
 <p>Install <em>Xquartz</em>.</p>
-<h4 id="windows-1"><span class="header-section-number">3.7.2.3</span> Windows</h4>
+<h4 id="windows-1">Windows</h4>
 <p>Nothing more to do.</p>
-<h3 id="in-all-cases"><span class="header-section-number">3.7.3</span> In all cases</h3>
+<h3 id="in-all-cases">In all cases</h3>
 <p>Give the <em>--x11</em> option to <em>srun</em>.</p>
 <pre><code>srun --x11 --partition=biopatic --nodelist=biopatic-node01 --ntasks=1 --pty rstudio</code></pre>
 <p>Or in two steps:</p>
 <pre><code>srun --x11 --partition=biopatic --nodelist=biopatic-node01 --ntasks=1 --pty /bin/bash -l</code></pre>
 <p>then</p>
 <pre><code>rstudio</code></pre>
-<h2 id="submitting-a-job"><span class="header-section-number">3.8</span> Submitting a job</h2>
+<h2 id="submitting-a-job">Submitting a job</h2>
 <p>Write a submission script <em>launch.job</em> (see <a href="#writing-a-submission-script">Writing a submission script</a>), then run:</p>
 <pre><code>sbatch launch.job</code></pre>
-<h2 id="stopping-a-job"><span class="header-section-number">3.9</span> Stopping a job</h2>
+<h2 id="stopping-a-job">Stopping a job</h2>
 <p>Get the ID number <em>N</em> of the job with the <em>squeue</em> command (<em>JOBID</em> column), then run:</p>
 <pre><code>scancel N</code></pre>
-<h1 id="writing-a-submission-script"><span class="header-section-number">4</span> Writing a submission script</h1>
-<h2 id="a-basic-script"><span class="header-section-number">4.1</span> A basic script</h2>
+<h1 id="writing-a-submission-script">Writing a submission script</h1>
+<h2 id="a-basic-script">A basic script</h2>
 <p>All options actually have short versions (for example, <em>--job-name</em> could be replaced by <em>-J</em>). I used the long names here for clarity. Not all options of this script are mandatory, but I feel this is the minimum that should be given in order to make the intent clear.</p>
 <p>I use a generic <em>program</em> in all scripts. Replace it with whatever executable you want. If it’s for testing purposes, you can simply replace it by <em>hostname</em> or <em>ls</em>.</p>
 <p>I give <em>ibrain</em> as the argument for <em>--partition</em> and you may not have access to it. Replace it with one of the partition you see appearing in the output of <em>sinfo</em>.</p>
@@ -229,7 +229,7 @@ srun program</code></pre>
 <li>replacing the dashes by underscores,</li>
 </ul>
 <p>So, in the example above, the variable <em>$SLURM_JOB_NAME</em>, <em>$SLURM_NTASKS</em>, <em>$SLURM_CPUS_PER_TASK</em> (and more) will be defined right after their corresponding option line.</p>
-<h2 id="decomposing-the-script"><span class="header-section-number">4.2</span> Decomposing the script</h2>
+<h2 id="decomposing-the-script">Decomposing the script</h2>
 <p>A submission script is composed of the following parts:</p>
 <ul>
 <li>a shebang,</li>
@@ -238,10 +238,10 @@ srun program</code></pre>
 <li>shell commands,</li>
 <li>run commands.</li>
 </ul>
-<h3 id="shebang"><span class="header-section-number">4.2.1</span> Shebang</h3>
+<h3 id="shebang">Shebang</h3>
 <p>The shebang is always the first line of the script. It specifies which shell interpreter to use for shell commands. Replace <em>sh</em> with whatever shell you want in the following line.</p>
 <pre><code>#!/bin/sh</code></pre>
-<h3 id="options"><span class="header-section-number">4.2.2</span> Options</h3>
+<h3 id="options">Options</h3>
 <p>Options are lines that start with</p>
 <pre><code>#SBATCH</code></pre>
 <p>They have two purposes.</p>
@@ -255,15 +255,15 @@ srun program</code></pre>
 </ul>
 <p>There are many more options:</p>
 <pre><code>man sbatch</code></pre>
-<h3 id="comments"><span class="header-section-number">4.2.3</span> Comments</h3>
+<h3 id="comments">Comments</h3>
 <p>Any line starting with <em>#</em> but not followed by <em>SBATCH</em> is a comment. If you want to comment an option, use more than one <em>#</em>:</p>
 <pre><code>##SBATCH</code></pre>
 <p>In order to avoid confusion between comment and option while using a single <em>#</em>, the comment in my example script uses two <em>#</em>, even though only one is required.</p>
-<h3 id="shell-commands"><span class="header-section-number">4.2.4</span> Shell commands</h3>
+<h3 id="shell-commands">Shell commands</h3>
 <p>Shell commands are used to setup the linux environment variables. They should <strong>not</strong> be preceeded by <em>srun</em>.</p>
-<h3 id="run-commands"><span class="header-section-number">4.2.5</span> Run commands</h3>
+<h3 id="run-commands">Run commands</h3>
 <p>Run commands are your actual computations. They should be preceeded by <em>srun</em>. The reason is that, as mentioned above, the options given with <em>#SBATCH</em> apply to <em>srun</em>. In truth, when only one task is given with the <em>--ntasks</em> option, omitting <em>srun</em> will not change anything. Put it there anyway, for consistency.</p>
-<h2 id="hyperthreading"><span class="header-section-number">4.3</span> Hyperthreading</h2>
+<h2 id="hyperthreading">Hyperthreading</h2>
 <p>Hyperthreading is activated on the nodes, meaning each core has two CPUs. But this does not double computational power, as using two CPUs of the same core is less efficient than using two CPUs of different cores. With that in mind, here is how slurm acts (with the number of CPUs you ask for being the product of <em>--ntasks</em> and <em>--cpus-per-task</em>):</p>
 <ul>
 <li>without the <em>--hint=nomultithread</em> option, asking for an odd number <em>N</em> of CPUs or asking for <em>N+1</em> CPUs is the same: slurm allocates the <em>N+1</em> CPUs of <em>(N+1)/2</em> cores,</li>
@@ -276,8 +276,8 @@ srun program</code></pre>
 </ul>
 <p>There really is only a single valid use of hyperthreading: when you want to ask for <strong>all</strong> the CPUs of a single node. In that case, remove the <em>--hint=nomultithread</em> option and allocate everything.</p>
 <p>The rest of this documentation assumes we don’t use hyperthreading.</p>
-<h2 id="running-things-in-parallel"><span class="header-section-number">4.4</span> Running things in parallel</h2>
-<h3 id="calling-the-same-program-multiple-times-in-parallel"><span class="header-section-number">4.4.1</span> Calling the same program multiple times in parallel</h3>
+<h2 id="running-things-in-parallel">Running things in parallel</h2>
+<h3 id="calling-the-same-program-multiple-times-in-parallel">Calling the same program multiple times in parallel</h3>
 <pre><code>#!/bin/sh
 #SBATCH --job-name example_script
 
@@ -297,7 +297,7 @@ module load gcc/7.3.1
 
 srun program</code></pre>
 <p>Recall that the options given with <em>#SBATCH</em> are passed to <em>srun</em>. In this case, a single call to <em>srun program</em> would be equivalent to <em>srun --ntasks 3 program</em>, which would call <em>program</em> three times.</p>
-<h3 id="several-steps-in-parallel"><span class="header-section-number">4.4.2</span> Several steps in parallel</h3>
+<h3 id="several-steps-in-parallel">Several steps in parallel</h3>
 <p>Here is the full script.</p>
 <pre><code>#!/bin/sh
 #SBATCH --job-name example_script
@@ -320,7 +320,7 @@ srun --ntasks=1 program0 &amp;
 srun --ntasks=1 program1 &amp;
 srun --ntasks=1 program2</code></pre>
 <p>Do not forget the <em>--ntasks 1</em> on the <em>srun</em> lines. If you do, <em>program0</em> will be called three times, and because three tasks are being run and you only allocated three, <em>program1</em> and <em>program2</em> will not be executed at the same time, and will have to wait for the previous tasks to end.</p>
-<h3 id="arrays"><span class="header-section-number">4.4.3</span> Arrays</h3>
+<h3 id="arrays">Arrays</h3>
 <p>This is useful when you want to use the same programs multiple times with various arguments. The requirements is that the arguments differ only by an integer number. Here is the script.</p>
 <pre><code>#!/bin/sh
 #SBATCH --job-name example_script
@@ -346,7 +346,7 @@ srun program $SLURM_ARRAY_TASK_ID</code></pre>
 <p>The above example will effectively run <em>program</em> 17 times, and the arguments given to <em>program</em> will take the values 1 and all integers between 5 and 20 (both included). Because of the <em>%4</em>, it will start by executing with arguments 1, 5, 6, 7 (if enough resources are available) while keeping the other execution in queue (without executing them). Argument 8 will execute as soon as one of the first four is done, argument 9 will execute as soon as two of the first five is done, and so on. Without the <em>%4</em>, slurm would have executed all 17 arguments (if enough resources were available) at once.</p>
 <p>It should be noted that the allocation you give (<em>--ntasks</em>, <em>--cpus-per-task</em> and <em>--mem 2G</em>) only concerns a single execution of <em>program</em>.</p>
 <p>Finally, the arguments don’t need to be exactly integers. You can put something like <em>prefix-${SLURM_ARRAY_TASK_ID}.extension</em> there.</p>
-<h3 id="openmp-fork"><span class="header-section-number">4.4.4</span> OpenMP / fork</h3>
+<h3 id="openmp-fork">OpenMP / fork</h3>
 <p>If you know a single execution of your program uses multiple threads/cores, give that number to <em>--cpus-per-task</em> and keep <em>--ntasks</em> at 1. If your program takes the number of threads/cores as argument, or if it checks an environment variable to decide how many threads/cores are used, recall that whatever you give to <em>--cpus-per-task</em> is accessible through the <em>$SLURM_CPUS_PER_TASK</em> variable. Example script for an OpenMP program.</p>
 <pre><code>#!/bin/sh
 #SBATCH --job-name example_script
@@ -366,7 +366,7 @@ module purge
 module load gcc/7.3.1
 
 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK srun program</code></pre>
-<h3 id="mpi-programs"><span class="header-section-number">4.4.5</span> MPI programs</h3>
+<h3 id="mpi-programs">MPI programs</h3>
 <p>For pure MPI programs, keep <em>--cpus-per-task</em> at 1, set <em>--ntasks</em> to the number of processes you want, and replace <em>srun</em> by <em>mpirun</em>.</p>
 <p>Here is a sample script for MPI/OpenMP hybrids.</p>
 <pre><code>#!/bin/sh
@@ -387,7 +387,7 @@ module purge
 module load gcc/7.3.1
 
 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK mpirun program</code></pre>
-<h3 id="other-options"><span class="header-section-number">4.4.6</span> Other options</h3>
+<h3 id="other-options">Other options</h3>
 <p>You can request specific nodes with the <em>--nodelist</em> option, which takes a comma separated list of nodes with possible integer ranges between brackets:</p>
 <pre><code>#SBATCH --nodelist ibrain-node[01-07],ibrain-node12</code></pre>
 <p>Be mindful that while slurm will use the requested node, other nodes may also be used if the resources you ask for exceed the requested nodes resources. If you want to <strong>only</strong> use the requested node, combine <em>--nodelist</em> with <em>--exclude</em>:</p>
