@@ -75,6 +75,7 @@ div.pnl-outer{
     
     
     
+    
     <!-- Classic WBB UI Overrides (Final Perfected) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -145,9 +146,11 @@ div.pnl-outer{
             color: var(--brand-black) !important;
             transition: all 0.2s;
         }
-        .dropdown-menu > li > a:hover {
-            background-color: #f1f4f8 !important;
-            color: var(--brand-blue) !important;
+        /* SOLID BLUE HOVER BOX FOR DROPDOWN ITEMS AS WELL */
+        .dropdown-menu > li > a:hover,
+        .dropdown-menu > li.active > a {
+            background-color: var(--brand-blue) !important;
+            color: var(--brand-white) !important;
             padding-left: 30px !important;
         }
 
@@ -241,6 +244,7 @@ div.pnl-outer{
         }
     </style>
 </head>
+
 
 
 
