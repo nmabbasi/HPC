@@ -76,14 +76,14 @@
     
     
     
-    <!-- Classic WBB UI Overrides (Final Black/Blue Polish) -->
+    
+    <!-- Classic WBB UI Overrides (Final Perfected) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-blue: #0088ff; /* brighter blue for dark background */
+            --brand-blue: #0056b3;
             --brand-black: #111111;
             --brand-white: #ffffff;
-            --brand-gray: #dddddd;
             --bg-color: #f8f9fa;
         }
         
@@ -94,7 +94,6 @@
             line-height: 1.7;
         }
         
-        /* Justified Text Alignment */
         p {
             text-align: justify !important;
             font-size: 1.05rem;
@@ -102,7 +101,7 @@
             margin-bottom: 1.2rem;
         }
         
-        /* Navbar - Solid Black */
+        /* Navbar - Solid Black with Blue Hover/Active Box */
         .navbar-inverse {
             background: var(--brand-black) !important;
             border: none !important;
@@ -115,8 +114,7 @@
             box-shadow: none !important;
         }
         .navbar-inverse .nav > li > a {
-            color: var(--brand-gray) !important;
-            background: transparent !important;
+            color: #dddddd !important; /* light gray for inactive */
             font-weight: 600;
             font-size: 1.05rem;
             letter-spacing: 0.5px;
@@ -124,14 +122,14 @@
             transition: all 0.3s ease;
             padding: 12px 20px;
             margin: 0 4px;
+            border-radius: 4px;
         }
-        
-        /* Hover and Active states - Text gets Blue, Background stays Black */
         .navbar-inverse .nav > li > a:hover,
         .navbar-inverse .nav > li.active > a,
         .navbar-inverse .nav > li.active.dropdown > a {
-            color: var(--brand-blue) !important;
-            background: transparent !important; /* No solid blue block! */
+            color: var(--brand-white) !important;
+            background: var(--brand-blue) !important; /* solid blue box on click/hover */
+            border-radius: 4px;
         }
         
         /* Dropdown */
@@ -245,6 +243,7 @@
         }
     </style>
 </head>
+
 
 
 
