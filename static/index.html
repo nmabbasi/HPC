@@ -157,6 +157,92 @@
             max-width: 1000px !important;
         }
 
+
+        /* ==========================================
+           MOBILE RESPONSIVENESS & MEDIA QUERIES
+           ========================================== */
+           
+        /* Desktop specific navbar */
+        @media (min-width: 980px) {
+            .navbar .nav {
+                display: flex !important;
+                justify-content: center !important;
+                float: none !important;
+                flex-wrap: nowrap !important;
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 979px) {
+            /* Reset navbar to stack vertically for mobile hamburger menu */
+            .navbar .nav {
+                display: block !important;
+            }
+            .navbar-inverse .nav > li > a {
+                padding: 12px 20px !important;
+                margin: 4px 10px !important;
+            }
+            
+            /* Shrink paddings and margins so content fits screen */
+            .page-content-card {
+                padding: 30px 20px !important;
+                border-radius: 12px !important;
+            }
+            
+            /* Adjust hero section for smaller screens */
+            .hero-cover {
+                height: 180px !important;
+            }
+            
+            .hero-profile {
+                margin-top: -60px !important;
+            }
+            
+            .hero-profile img {
+                width: 120px !important;
+                height: 120px !important;
+                border-width: 5px !important;
+            }
+            
+            .hero-name {
+                font-size: 2rem !important;
+            }
+            
+            .hero-title {
+                font-size: 1.1rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .hero-text {
+                padding: 10px 20px 30px 20px !important;
+            }
+            
+            /* Typography scaling */
+            h1 { font-size: 2.2rem !important; }
+            h2 { font-size: 1.6rem !important; }
+            h3 { font-size: 1.3rem !important; }
+            p, ul, ol { font-size: 1.05rem !important; }
+            
+            /* Make sure code blocks don't break width */
+            pre {
+                padding: 15px !important;
+                padding-top: 35px !important;
+                font-size: 0.85rem !important;
+            }
+            
+            pre::before {
+                top: 12px;
+                left: 12px;
+                width: 10px;
+                height: 10px;
+                box-shadow: 16px 0 0 #f59e0b, 32px 0 0 #10b981;
+            }
+            
+            .main-content-container {
+                margin: 20px auto 40px auto !important;
+            }
+        }
+
 </style>  
 
   
@@ -521,6 +607,92 @@
         .navbar-wrapper {
             width: 100% !important;
             max-width: 1000px !important;
+        }
+
+
+        /* ==========================================
+           MOBILE RESPONSIVENESS & MEDIA QUERIES
+           ========================================== */
+           
+        /* Desktop specific navbar */
+        @media (min-width: 980px) {
+            .navbar .nav {
+                display: flex !important;
+                justify-content: center !important;
+                float: none !important;
+                flex-wrap: nowrap !important;
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 979px) {
+            /* Reset navbar to stack vertically for mobile hamburger menu */
+            .navbar .nav {
+                display: block !important;
+            }
+            .navbar-inverse .nav > li > a {
+                padding: 12px 20px !important;
+                margin: 4px 10px !important;
+            }
+            
+            /* Shrink paddings and margins so content fits screen */
+            .page-content-card {
+                padding: 30px 20px !important;
+                border-radius: 12px !important;
+            }
+            
+            /* Adjust hero section for smaller screens */
+            .hero-cover {
+                height: 180px !important;
+            }
+            
+            .hero-profile {
+                margin-top: -60px !important;
+            }
+            
+            .hero-profile img {
+                width: 120px !important;
+                height: 120px !important;
+                border-width: 5px !important;
+            }
+            
+            .hero-name {
+                font-size: 2rem !important;
+            }
+            
+            .hero-title {
+                font-size: 1.1rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .hero-text {
+                padding: 10px 20px 30px 20px !important;
+            }
+            
+            /* Typography scaling */
+            h1 { font-size: 2.2rem !important; }
+            h2 { font-size: 1.6rem !important; }
+            h3 { font-size: 1.3rem !important; }
+            p, ul, ol { font-size: 1.05rem !important; }
+            
+            /* Make sure code blocks don't break width */
+            pre {
+                padding: 15px !important;
+                padding-top: 35px !important;
+                font-size: 0.85rem !important;
+            }
+            
+            pre::before {
+                top: 12px;
+                left: 12px;
+                width: 10px;
+                height: 10px;
+                box-shadow: 16px 0 0 #f59e0b, 32px 0 0 #10b981;
+            }
+            
+            .main-content-container {
+                margin: 20px auto 40px auto !important;
+            }
         }
 
 </style>
