@@ -12,17 +12,13 @@ An academic departmental website hosted via GitHub Pages. This repository contai
 - **Group Activity Logs:** HTML modules detailing group research and published manuscripts.
 
 
-## 🚀 How to View the Portal
+## 🚀 Access the Portal
 
-This repository contains the static source code for the website. To explore the portal and its tutorials:
+The website is actively deployed and hosted via GitHub Pages.
 
-1. Clone or download this repository to your local machine:
-   ```bash
-   git clone https://github.com/nmabbasi/cnrs.github.io.git
-   ```
-2. Open the downloaded folder and double-click the `index.html` file.
-3. The portal will open in your default web browser for offline viewing.
+👉 **[Click Here to Visit the Live Portal](https://nmabbasi.github.io/cnrs.github.io/)**
 
 ---
+
 ## 📧 Contact
 **Nasir Mahmood Abbasi** | GitHub: [@nmabbasi](https://github.com/nmabbasi)
