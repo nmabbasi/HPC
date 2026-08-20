@@ -8,10 +8,14 @@
     <link rel="icon" href="{{ '/static/img/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/usability-refinements.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/navigation-states.css' | relative_url }}">
+    {% if page.url == '/docs/support/' %}
     <link rel="stylesheet" href="{{ '/assets/css/support-navigation.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/learning-resources.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/navigation-states.css' | relative_url }}">
+    {% endif %}
+    {% if page.next_url %}
     <link rel="stylesheet" href="{{ '/assets/css/next-step-card.css' | relative_url }}">
+    {% endif %}
   </head>
   <body id="top">
     <header class="site-header">

@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="doc-hero">
-  <div class="shell"><p class="eyebrow">HPC documentation</p><p class="doc-step">{{ page.step | default: 'Guide' }}</p><h1>{{ page.title }}</h1>{% if page.summary %}<p class="doc-summary">{{ page.summary }}</p>{% endif %}</div>
+  <div class="shell"><p class="eyebrow">HPC documentation</p><p class="doc-step">{{ page.step | default: 'Guide' }}</p><h1{% if page.title_line_one and page.title_line_two %} class="doc-title-two-line"{% endif %}>{% if page.title_line_one and page.title_line_two %}{{ page.title_line_one }}<br>{{ page.title_line_two }}{% else %}{{ page.title }}{% endif %}</h1>{% if page.summary %}<p class="doc-summary">{{ page.summary }}</p>{% endif %}</div>
 </section>
 <div class="shell doc-shell">
   <aside class="doc-side" aria-label="Documentation routes"><p>HPC routes</p>{% for route in site.data.routes %}<a class="doc-route" href="{{ route.url | relative_url }}"{% if page.url == route.url %} aria-current="page"{% endif %}><span class="doc-route-step">{{ route.step }}</span><span class="doc-route-label">{{ route.title }}</span></a>{% endfor %}</aside>

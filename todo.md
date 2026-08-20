@@ -1,5 +1,12 @@
 # HPC Guide Publication Checklist
 
+- [x] Format the Conda guide title in two deliberate lines.
+- [x] Re-measure fresh Conda loading behaviour and identify any actionable delay.
+
+Fresh measurement: five uncached live document requests completed in 46–117 ms. The Conda page now also skips the two support-only stylesheet requests, reducing cold-load work without changing the guide content.
+- [x] Validate and publish the Conda title and performance refinement.
+
+Local verification: the Conda title now renders as exactly two lines, with Conda environments on the first line and on the cluster on the second.
 - [x] Remove the CURRENT text from active side routes while retaining their green active state.
 - [x] Measure the live Conda guide loading path and address any avoidable bottleneck.
 

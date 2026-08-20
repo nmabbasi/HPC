@@ -2,6 +2,7 @@
 .site-nav a[aria-current="page"]{border-color:#87cf7f!important;background:#e2f5df!important;color:#165e35!important;font-weight:800;box-shadow:inset 0 -2px 0 #238b57}
 .site-nav a:hover:not([aria-current="page"]){border-color:#a7dda1;background:#f3fbef;color:#165e35}
 .site-nav a:focus-visible,.doc-side a:focus-visible{outline:3px solid #7ee2a8;outline-offset:3px}
+.doc-hero h1.doc-title-two-line{max-width:22ch}
 
 .doc-side{align-self:start}
 .doc-side .doc-route{position:relative;display:grid;grid-template-columns:2.3rem minmax(0,1fr);column-gap:.55rem;align-items:center;min-height:54px!important;margin:.2rem 0;padding:.55rem .7rem!important;border:1px solid transparent;border-left:4px solid transparent;border-radius:8px;color:#264c59;text-decoration:none!important}

@@ -1,5 +1,7 @@
 ---
 title: 'Conda environments on the cluster'
+title_line_one: 'Conda environments'
+title_line_two: 'on the cluster'
 summary: 'Create, activate, export, and use isolated software environments in HPC workflows.'
 step: '04'
 next_label: 'Next step'
