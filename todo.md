@@ -3,6 +3,8 @@
 - [x] Audit all six documentation routes for consistent navigation names and active-tab states.
 - [x] Restore a focused learning-resources section in Get Support without displacing direct help actions.
 - [x] Validate and publish the complete guide-wide navigation refinement.
+
+Verification: a cache-bypassed live review confirmed the seven primary tabs, active-page state, direct Get Support actions, and four restored learning-resource links.
 - [x] Make the Get Support route explicit in primary navigation, route cards, and help actions.
 - [x] Add a clear support-link section that directs learners to the right guide before contacting support.
 - [x] Validate and publish the revised Get Support navigation.
