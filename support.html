@@ -124,42 +124,54 @@
 
 
 <div class="container main-content-container">
+    
+    <!-- Premium Secondary Hero Section -->
+    <div class="hero-section" style="margin-bottom: 40px; text-align: center; overflow: hidden;">
+        <div class="hero-cover" style="height: 180px; background: linear-gradient(135deg, var(--dark-slate) 0%, var(--primary-blue) 100%); display: flex; align-items: center; justify-content: center;">
+            <h1 style="color: #ffffff; border: none; margin: 0; padding: 0; font-size: 2.8rem !important; letter-spacing: 1px;">Support & Learning</h1>
+        </div>
+        <div class="hero-text" style="padding: 30px 40px;">
+            <p class="hero-bio" style="font-size: 1.2rem;">Curated resources and documentation for mastering Linux, High-Performance Computing, and Command Line workflows.</p>
+        </div>
+    </div>
+
     <div class="page-content-card">
 
+      <h2 id="Linux" style="margin-top: 0;">Linux & Unix Mastery</h2>
+      
+      <h3>Command Line Interface (CLI) & Scripting</h3>
+      <p>
+        <strong>Text-based Tutorials:</strong><br>
+        <a href="http://swcarpentry.github.io/shell-novice/" target="_blank">Software Carpentry: The Unix Shell</a> — A foundational tutorial explaining the basics of the Unix-like shell, navigating the file system, utilizing basic commands, and writing simple scripts.
+      </p>
+      
+      <p>
+        <strong>Video Masterclasses:</strong><br>
+        <a href="https://www.linkedin.com/learning/learning-linux-command-line-2" target="_blank">LinkedIn Learning: Linux Command Line</a> — Going through the full tutorial (~2.5 hours) is highly recommended. For a rapid start, the <a href="https://www.linkedin.com/learning/paths/north-carolina-state-university-linux-essentials-for-hpc?u=53565897&auth=true" target="_blank">HPC Essentials Learning Path</a> provides 40 minutes of targeted instruction specifically for cluster environments like Henry2.
+      </p>
+      
+      <p>
+        <strong>Practice Drill:</strong><br>
+        <a href="https://youtu.be/SYOANUvIg_A" target="_blank">Essential Linux Commands - Fluency Drill</a> — A focused session on executing basic commands rapidly, alongside understanding file and directory permissions (chmod/chown).
+      </p>
 
-      <div class="page-header">
-      <h1>Links for Learning HPC</h1>
-      <p>See the following links for learning HPC concepts and skills, from beginner to advanced.</p>
-      </div>
+      <hr>
 
-      <div class="container-fluid">
-
-      <h2 id="Linux">Linux</h2>
-      <h3 id="LinuxHere">Linux/Unix commands and scripting</h3>
-      
-      <p><b>Text based tutorials</b><br>
-      <a href="http://swcarpentry.github.io/shell-novice/" target="_blank">Software Carpentry tutorial on the Unix Shell.</a> The tutorial explains the basics of the Unix shell (Linux is a <i>Unix-like</i> operating system), including the difference between graphical user interface (GUI) and command line interface, using the prompt, navigating the file system, basic Unix/Linux commands, and the use of a text editor.</p>
-      
-      <p><b>Video tutorial</b><br>
-      <a href="https://www.linkedin.com/learning/learning-linux-command-line-2" target="_blank">LinkedIn Learning video tutorial on Linux.</a> Going through the full Linux tutorial on LinkedIn Learning is well worth the time and consists of less than 2.5 hours total of video instruction and setup. For a quicker start, this <a href="https://www.linkedin.com/learning/paths/north-carolina-state-university-linux-essentials-for-hpc?u=53565897&auth=true" target="_blank">Learning Path</a> is a subset of content containing just the essentials needed for basic interaction with Henry2, consisting of about 40 minutes of video instruction plus setting the environment.</p>
-      
-      <p>See the video <a href="https://youtu.be/SYOANUvIg_A" target="_blank">Essential Linux Commands - Fluency Drill</a> for practice using the basic set of commands. It also explains file and directory permissions, and how to change them.</p>
-      
-      <h3>Command line text editors</h3>
+      <h3>Command Line Text Editors</h3>
       <ul>
-        <li><b>Vi/Vim</b>: See the <a href="https://www.linkedin.com/learning/learning-vim" target="_blank">full LinkedIn Learning video tutorial on Vim</a> or a <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-vim" target="_blank">short section on Vim</a> from LinkedIn Learning Linux tutorial (skip the sudo apt install part).</li>
-        <li><b>nano</b>: See the <a href="https://www.linkedin.com/learning/learning-nano" target="_blank">full LinkedIn Learning video tutorial on nano</a> or a <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-nano" target="_blank">short section on nano</a> from LinkedIn Learning Linux tutorial.</li>
+        <li><strong>Vi / Vim:</strong> Extremely powerful, modal text editor available on virtually every Linux system. <a href="https://www.linkedin.com/learning/learning-vim" target="_blank">Full Vim Tutorial</a> | <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-vim" target="_blank">Quick Overview</a></li>
+        <li><strong>Nano:</strong> A simple, beginner-friendly text editor. Great for quick edits. <a href="https://www.linkedin.com/learning/learning-nano" target="_blank">Full Nano Tutorial</a> | <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-nano" target="_blank">Quick Overview</a></li>
       </ul>
 
-      <h2 id="whatis">High Performance Computing</h2>
-      <h3>Basic concepts</h3>
-      <p><a href="https://epcced.github.io/hpc-intro/" target="_blank">Introduction to High-Performance Computing.</a> This Software Carpentry tutorial is customized for the computing environment.</p>
+      <hr>
+
+      <h2 id="whatis">High Performance Computing (HPC)</h2>
+      <h3>Foundational Concepts</h3>
+      <p>
+        <a href="https://epcced.github.io/hpc-intro/" target="_blank">Introduction to High-Performance Computing</a> — A specialized Software Carpentry curriculum tailored for understanding job schedulers (SLURM), nodes, resource allocation, and cluster architecture.
+      </p>
       
-      </div>
-
-
-
-<br><hr><br>
+    </div>
 
     <!-- Le javascript
     ================================================== -->
