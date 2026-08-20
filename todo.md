@@ -1,5 +1,10 @@
 # HPC Guide Publication Checklist
 
+- [x] Remove the CURRENT text from active side routes while retaining their green active state.
+- [x] Measure the live Conda guide loading path and address any avoidable bottleneck.
+
+Performance finding: a fresh live Conda load reached DOM content in 84 ms, completed in 91 ms, and returned its document in 108 ms from the host. There is no measured page-level loading bottleneck to remove.
+- [ ] Validate and publish the active-route and performance refinement.
 - [x] Redesign the Next step control as a tab-style navigation card.
 - [x] Add a green hover and keyboard-focus state to the Next step card.
 - [x] Validate and publish the Next step refinement.
