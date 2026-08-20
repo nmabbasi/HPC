@@ -7,6 +7,8 @@ Fresh measurement: five uncached live document requests completed in 46–117 ms
 - [x] Validate and publish the Conda title and performance refinement.
 
 Local verification: the Conda title now renders as exactly two lines, with Conda environments on the first line and on the cluster on the second.
+
+Live verification: the deployed Conda page receives versioned stylesheets, preventing an older cached stylesheet from overriding the intended two-line title layout.
 - [x] Remove the CURRENT text from active side routes while retaining their green active state.
 - [x] Measure the live Conda guide loading path and address any avoidable bottleneck.
 
