@@ -1,5 +1,10 @@
 # HPC Guide Publication Checklist
 
+- [x] Redesign the Next step control as a tab-style navigation card.
+- [x] Add a green hover and keyboard-focus state to the Next step card.
+- [x] Validate and publish the Next step refinement.
+
+Local review: the Next step control now renders as a separate tab-style card beneath the documentation content. On hover it becomes a clear green tab with white text and a white arrow control.
 - [x] Improve the side HPC route interaction and current-page clarity.
 - [x] Apply an accessible light-green active state to the top navigation and side route.
 - [x] Validate and publish the navigation-state refinement.

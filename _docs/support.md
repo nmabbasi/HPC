@@ -11,7 +11,7 @@ step: '06'
 </section>
 
 <nav class="support-actions" aria-label="Get Support actions">
-  <a class="support-action-primary" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request"><span>Direct contact</span><strong>Email for support <span aria-hidden="true">→</span></strong></a>
+  <a class="support-action-primary" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request"><span>Direct contact</span><strong>Email: nmabbasi@gmail.com <span aria-hidden="true">→</span></strong></a>
   <a class="support-action-secondary" href="#capture-the-essentials"><span>Before you contact</span><strong>Collect job details <span aria-hidden="true">↓</span></strong></a>
 </nav>
 
@@ -76,7 +76,7 @@ Attachments: Relevant job script and small log excerpts only.
     <h2>Send a concise support request</h2>
     <p>Include the template above and only the smallest useful log excerpt. The contact route is intended for technical questions about the guidance, reproducible workflow problems, and document corrections.</p>
   </div>
-  <a class="support-email" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request">Email nmabbasi@gmail.com <span aria-hidden="true">→</span></a>
+  <a class="support-email" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request">Email: nmabbasi@gmail.com <span aria-hidden="true">→</span></a>
 </section>
 
 ## Choose the right support route
