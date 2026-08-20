@@ -124,11 +124,19 @@
 
 
 <div class="container main-content-container">
+    
+    <!-- Premium Secondary Hero Section -->
+    <div class="hero-section" style="margin-bottom: 40px; text-align: center; overflow: hidden;">
+        <div class="hero-cover" style="height: 180px; background: linear-gradient(135deg, var(--dark-slate) 0%, var(--primary-blue) 100%); display: flex; align-items: center; justify-content: center;">
+            <h1 style="color: #ffffff; border: none; margin: 0; padding: 0; font-size: 2.8rem !important; letter-spacing: 1px;">Writing a submission script</h1>
+        </div>
+    </div>
+
     <div class="page-content-card">
 
 
 
-    <h1 id="writing-a-submission-script"><span class="header-section-number"></span> Writing a submission script</h1>
+    
     <h2 id="a-basic-script"><span class="header-section-number"></span> A basic script</h2>
     <p>All options actually have short versions (for example, <em>--job-name</em> could be replaced by <em>-J</em>). I used the long names here for clarity. Not all options of this script are mandatory, but I feel this is the minimum that should be given in order to make the intent clear.</p>
     <p>I use a generic <em>program</em> in all scripts. Replace it with whatever executable you want. If it’s for testing purposes, you can simply replace it by <em>hostname</em> or <em>ls</em>.</p>
@@ -330,7 +338,7 @@
     <pre><code>#SBATCH --nodelist ibrain-gpu01
     #SBATCH --exclude ibrain-node[01-12]</code></pre>
     </div>
-<br><hr><br>
+
     	</div>
 
 
