@@ -10,6 +10,11 @@ step: '06'
   <p>Most HPC issues can be resolved much faster when the error, job details, environment, and expected result are captured together. Follow this short route before sending a request.</p>
 </section>
 
+<nav class="support-actions" aria-label="Get Support actions">
+  <a class="support-action-primary" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request"><span>Direct contact</span><strong>Email for support <span aria-hidden="true">→</span></strong></a>
+  <a class="support-action-secondary" href="#capture-the-essentials"><span>Before you contact</span><strong>Collect job details <span aria-hidden="true">↓</span></strong></a>
+</nav>
+
 <div class="support-grid" aria-label="Support triage steps">
   <section class="support-card">
     <p class="support-number">01</p>
@@ -74,13 +79,13 @@ Attachments: Relevant job script and small log excerpts only.
   <a class="support-email" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request">Email nmabbasi@gmail.com <span aria-hidden="true">→</span></a>
 </section>
 
-## Resolve common issues first
+## Choose the right support route
 
 <div class="support-links">
-  <a href="{{ '/docs/connections/' | relative_url }}"><strong>Cannot connect?</strong><span>Recheck access, SSH syntax, and authentication.</span></a>
-  <a href="{{ '/docs/commands/' | relative_url }}"><strong>Command not found?</strong><span>Review paths, modules, and basic cluster commands.</span></a>
-  <a href="{{ '/docs/job-scripts/' | relative_url }}"><strong>Job failed or stayed pending?</strong><span>Inspect Slurm resources, state, and log files.</span></a>
-  <a href="{{ '/docs/conda/' | relative_url }}"><strong>Environment conflict?</strong><span>Check channels, activation, and the exported YAML file.</span></a>
+  <a href="{{ '/docs/connections/' | relative_url }}"><strong>Connection support</strong><span>Recheck access, SSH syntax, and authentication.</span></a>
+  <a href="{{ '/docs/commands/' | relative_url }}"><strong>Command and module support</strong><span>Review paths, modules, and basic cluster commands.</span></a>
+  <a href="{{ '/docs/job-scripts/' | relative_url }}"><strong>Slurm job support</strong><span>Inspect resource requests, job state, and log files.</span></a>
+  <a href="{{ '/docs/conda/' | relative_url }}"><strong>Conda environment support</strong><span>Check channels, activation, and the exported YAML file.</span></a>
 </div>
 
 > **Safe sharing rule:** never include passwords, private SSH keys, access tokens, participant information, or restricted research data in a support request.

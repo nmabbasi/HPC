@@ -8,6 +8,7 @@
     <link rel="icon" href="{{ '/static/img/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/usability-refinements.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/support-navigation.css' | relative_url }}">
   </head>
   <body id="top">
     <header class="site-header">
@@ -32,7 +33,7 @@
       <div class="shell footer-grid">
         <div class="footer-intro"><div class="footer-kicker">HPC Guide</div><p>Practical documentation for connection, clusters, Slurm jobs, Conda environments, and research-computing support.</p></div>
         <nav class="footer-routes" aria-label="Footer documentation navigation"><p>Explore documentation</p><div>{% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}">{{ item.label }}</a>{% endfor %}</div></nav>
-        <a class="footer-help" href="{{ '/docs/support/' | relative_url }}"><span>Need a clear next step?</span><strong>Open the support guide <span aria-hidden="true">→</span></strong></a>
+        <a class="footer-help" href="{{ '/docs/support/' | relative_url }}"><span>Need help with an HPC task?</span><strong>Get Support <span aria-hidden="true">→</span></strong></a>
       </div>
       <div class="shell footer-bottom"><span>HPC Guide · Research computing documentation</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
