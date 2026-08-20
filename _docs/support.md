@@ -88,4 +88,18 @@ Attachments: Relevant job script and small log excerpts only.
   <a href="{{ '/docs/conda/' | relative_url }}"><strong>Conda environment support</strong><span>Check channels, activation, and the exported YAML file.</span></a>
 </div>
 
+<section class="learning-resources" aria-labelledby="learn-more-title">
+  <div class="learning-resources-heading">
+    <p class="support-label">Continue learning</p>
+    <h2 id="learn-more-title">Learn from trusted HPC and Linux resources</h2>
+    <p>Use these focused resources to strengthen your command-line foundations, text-editing skills, and understanding of shared research computing.</p>
+  </div>
+  <div class="learning-resource-grid">
+    <a href="https://swcarpentry.github.io/shell-novice/" target="_blank" rel="noopener noreferrer"><span class="resource-type">Interactive lesson</span><strong>Software Carpentry: The Unix Shell <span aria-hidden="true">↗</span></strong><small>Learn file navigation, shell commands, and small scripts through practical exercises.</small></a>
+    <a href="https://epcced.github.io/hpc-intro/" target="_blank" rel="noopener noreferrer"><span class="resource-type">HPC foundations</span><strong>Introduction to High-Performance Computing <span aria-hidden="true">↗</span></strong><small>Understand schedulers, nodes, resource requests, and the concepts behind cluster workflows.</small></a>
+    <a href="https://www.linkedin.com/learning/learning-linux-command-line-2" target="_blank" rel="noopener noreferrer"><span class="resource-type">Video course</span><strong>Linux Command Line <span aria-hidden="true">↗</span></strong><small>Build a structured command-line practice routine before running larger workflows.</small></a>
+    <a href="https://youtu.be/SYOANUvIg_A" target="_blank" rel="noopener noreferrer"><span class="resource-type">Practice drill</span><strong>Essential Linux Commands <span aria-hidden="true">↗</span></strong><small>Reinforce everyday commands and permissions through a concise practical session.</small></a>
+  </div>
+</section>
+
 > **Safe sharing rule:** never include passwords, private SSH keys, access tokens, participant information, or restricted research data in a support request.

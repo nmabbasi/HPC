@@ -8,5 +8,7 @@
   url: /docs/job-scripts/
 - label: Conda
   url: /docs/conda/
+- label: Software
+  url: /docs/custom-modules/
 - label: Get Support
   url: /docs/support/
