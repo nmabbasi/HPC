@@ -1,7 +1,7 @@
-title: CNRS HPC Guide
+title: HPC Guide
 description: Practical documentation for secure cluster access, SLURM workflows, Conda environments, and bioinformatics research computing.
 url: https://nmabbasi.github.io
-baseurl: /cnrs.github.io
+baseurl: /HPC
 lang: en
 markdown: kramdown
 highlighter: rouge
@@ -27,3 +27,5 @@ exclude:
   - vendor
   - Gemfile.lock
   - README.md
+  - ideas.md
+  - todo.md

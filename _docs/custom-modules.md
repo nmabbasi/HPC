@@ -6,124 +6,79 @@ next_label: 'Next step'
 next_title: 'Get support'
 next_url: '/docs/support/'
 ---
-<div class="page-header">
 
-</div>
+## When to create a custom module
 
-<div>
+Use a custom module when you have installed approved software in your project space and want a repeatable way to expose its commands. A module keeps paths and library settings out of job scripts, so the same software environment can be loaded interactively and in batch jobs.
 
-After installing an application, variables such as `PATH` and `LD_LIBRARY_PATH` must be set in order to call the application from any directory. The preferred method of setting the environment is to use the `module load` command. Typing `module avail` shows the modules installed by staff that are available system wide.
+> **Before you begin:** follow your institution’s storage and software policies. Do not install software in shared system locations unless your HPC service explicitly authorises it.
 
-Users may also create their own custom modules.
+## Create a module-file directory
 
-## <span id="create"></span>Creating a custom module
+Choose a directory in your home or project area. In this example, `MODULE_ROOT` is a personal module-file directory.
 
-Here is the general procedure to create a module for user maintained software.
+```bash
+export MODULE_ROOT="$HOME/modulefiles"
+mkdir -p "$MODULE_ROOT/spades"
+```
 
-- Make a directory for the module files:
+Module files are normally grouped by software name, then by version. This makes it straightforward to keep several versions side by side.
 
-      mkdir /usr/local/usrapps/$GROUP/modulefiles
+## Write a module file
 
-- In the ***modulefiles*** directory, make a directory for each software, e.g.,
+Create a file named for the installed software version. Replace `/path/to/spades` with the actual directory containing the executable `bin` folder.
 
-      mkdir /usr/local/usrapps/$GROUP/modulefiles/appname
+```bash
+cat > "$MODULE_ROOT/spades/3.14.0" <<'EOF'
+#%Module1.0
+## SPAdes 3.14.0 installed in a user-managed project area
+prepend-path PATH /path/to/spades/bin
+EOF
+```
 
-- In the directory ***appname***, create a text file appropriately named to indicate version number and, if applicable, the compiler version. The staff naming convention for modules is generally
-  ***appname/\[app version number\]-\[name and version of compiler\]***
+The first line identifies the file as a module file. `prepend-path` places the software directory before the rest of your `PATH`, allowing the intended executable to be found consistently.
 
-- Module files start with the line
+## Load the module
 
-      #%Module
+Tell the module system where to find your module files, then load the version you created.
 
-  followed by definitions for the environment variables. To see examples of how to define the environment variables, see the contents of various staff created modules here: ***/usr/local/apps/modulefiles***. For an example of a more complex module file, see one of the Intel modules, e.g., ***/opt/intel/modulefiles/intel/2017.1.132***.
+```bash
+module use --append "$MODULE_ROOT"
+module load spades/3.14.0
+which spades.py
+```
 
-- The default module can be set by creating a text file called ***.version*** in the directory ***/usr/local/usrapps/\$GROUP/modulefiles/appname/*** containing
+Run `module avail` to review all available modules. If the software is not found, confirm the module-file path and the executable path in the `prepend-path` line.
 
-          #%Module
-          set ModulesVersion [app version number]-[name and version of compiler]
+## Make the module available in future sessions
 
-## <span id="load"></span>Loading a custom module
+Add the module-file location to your shell startup file only when your HPC service recommends this workflow. For Bash, the following line can be added to `~/.bashrc`:
 
-To load the module, the whole path may be specified
+```bash
+module use --append "$HOME/modulefiles"
+```
 
-    module load /usr/local/usrapps/$GROUP/modulefiles/appname/[app version number]-[name and version of compiler]
+Open a new terminal session and verify that `module avail` shows your software. Keep project-specific module paths inside the project when they should not be used globally.
 
-Alternatively, the path to the modulefiles can be added by doing the following. (Do not add a slash '/' after ***modulefiles***.)
+## Use custom modules in a Slurm job
 
-    module use --append /usr/local/usrapps/$GROUP/modulefiles
+Load the same module explicitly in the batch script. This keeps the compute-node environment reproducible instead of relying on an interactive shell session.
 
-After doing `module use --append`, the custom modules should be visible when typing `module avail`, and then modules may be loaded as usual:
+```bash
+#!/usr/bin/env bash
+#SBATCH --job-name=spades-test
+#SBATCH --cpus-per-task=8
+#SBATCH --time=01:00:00
 
-    module load appname
+module use --append "$HOME/modulefiles"
+module load spades/3.14.0
+spades.py --help
+```
 
-## <span id="example"></span>Example
+## Troubleshooting checklist
 
-Here is a full example of creating a module. This was done to install and create a module for SPAdes in the software group **bioinfo**. (Only members of **bioinfo** can access this module.)
-
-### <span id="install"></span>Install the application
-
-The following was done to install SPAdes:
-
-        mkdir /usr/local/usrapps/bioinfo/spades
-        cd /usr/local/usrapps/bioinfo/spades
-        wget http://cab.spbu.ru/files/release3.14.0/SPAdes-3.14.0-Linux.tar.gz
-        tar -xzf SPAdes-3.14.0-Linux.tar.gz
-        rm SPAdes-3.14.0-Linux.tar.gz
-
-
-This results in a directory called ***SPAdes-3.14.0-Linux***, containing the directories
-
-        bin     #contains the executables
-        share   #often contains documentation
-
-
-### <span id="create"></span>Create the module
-
-To create the module, first create the ***modulefiles*** and ***appname*** directories:
-
-        mkdir /usr/local/usrapps/bioinfo/modulefiles
-        cd /usr/local/usrapps/bioinfo/modulefiles
-        mkdir spades
-        cd spades
-
-
-SPAdes was downloaded as a binary executable rather than being compiled; therefore, the naming convention is ***appname/\[app version number\]***. The version number was **3.14.0**.
-
-From the directory ***/usr/local/usrapps/bioinfo/modulefiles/spades***, create a text file called ***3.14.0*** containing
-
-        #%Module
-        prepend-path PATH {/usr/local/usrapps/bioinfo/spades/SPAdes-3.14.0-Linux/bin};
-
-
-### <span id="default"></span>Set the default module
-
-In case there are or will be other versions of SPAdes installed, set **3.14.0** as default by creating a file ***/usr/local/usrapps/bioinfo/modulefiles/spades/.version*** containing
-
-        #%Module
-        set ModulesVersion 3.14.0
-
-
-### <span id="default"></span>Call the module
-
-The module for SPAdes may be called from the command line or from an LSF batch script by doing
-
-    module load /usr/local/usrapps/bioinfo/modulefiles/spades/3.14.0
-
-
-or by doing
-
-    module use --append /usr/local/usrapps/bioinfo/modulefiles
-    module load spades
-
-
-### <span id="login"></span>Set the modules path to be available on login
-
-To make the modules available upon logging in, without having to specify the full path or doing `module use`, add the following to the ***~/.tcsh*** or ***~/.bashrc*** file:
-
-    #User defined modules
-    module use --append /usr/local/usrapps/bioinfo/modulefiles
-
-
-Usually modifications to the login files (.tcsh, .bashrc., .login) are discouraged, but this an appropriate use case for modifying those files.
-
-</div>
+- Confirm that the module file is named with the exact version you load.
+- Use `module show spades/3.14.0` to inspect the environment changes before a job runs.
+- Use `which` and `--version` after loading a module to verify the executable and version.
+- Keep the module file and installed software inside a backed-up project location.
+- Include the `module use` and `module load` lines in every batch script that depends on the software.

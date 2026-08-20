@@ -12,11 +12,11 @@
   <body id="top">
     <header class="site-header">
       <div class="shell header-shell">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="CNRS HPC Guide home">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="HPC Guide home">
           <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
             <rect x="4" y="4" width="10" height="10" rx="1.5" fill="#58C7D1"></rect><rect x="18" y="4" width="10" height="10" rx="1.5" fill="#7F91AF"></rect><rect x="4" y="18" width="10" height="10" rx="1.5" fill="#E4A653"></rect><rect x="18" y="18" width="10" height="10" rx="1.5" fill="#EAF8FA"></rect><path d="M14 9h4M9 14v4M23 14v4M14 23h4" stroke="#EAF8FA" stroke-width="1.6" stroke-linecap="round"></path>
           </svg>
-          <span><strong>CNRS HPC Guide</strong><small>Research computing documentation</small></span>
+          <span><strong>HPC Guide</strong><small>Research computing documentation</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><span aria-hidden="true">☰</span></button>
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
@@ -30,11 +30,11 @@
     <main>{{ content }}</main>
     <footer class="site-footer">
       <div class="shell footer-grid">
-        <div class="footer-intro"><div class="footer-kicker">CNRS HPC Guide</div><p>Practical documentation for connection, clusters, Slurm jobs, Conda environments, and research-computing support.</p></div>
+        <div class="footer-intro"><div class="footer-kicker">HPC Guide</div><p>Practical documentation for connection, clusters, Slurm jobs, Conda environments, and research-computing support.</p></div>
         <nav class="footer-routes" aria-label="Footer documentation navigation"><p>Explore documentation</p><div>{% for item in site.data.navigation %}<a href="{{ item.url | relative_url }}">{{ item.label }}</a>{% endfor %}</div></nav>
         <a class="footer-help" href="{{ '/docs/support/' | relative_url }}"><span>Need a clear next step?</span><strong>Open the support guide <span aria-hidden="true">→</span></strong></a>
       </div>
-      <div class="shell footer-bottom"><span>CNRS HPC Guide · Research computing documentation</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+      <div class="shell footer-bottom"><span>HPC Guide · Research computing documentation</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
     <script>
       const toggle = document.querySelector('.menu-toggle');

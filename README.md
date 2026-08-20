@@ -1,24 +1,13 @@
-# CNRS Research Institute Portal 🏛️
+# HPC Guide
 
-[![Hosting: GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-black.svg)]()
-[![Language: HTML](https://img.shields.io/badge/Language-HTML-orange.svg)]()
+**HPC Guide** is a fast, documentation-first resource for secure cluster access, essential Linux commands, Slurm job scripts, Conda environments, custom software modules, and practical troubleshooting.
 
-## 📋 Overview
-An academic departmental website hosted via GitHub Pages. This repository contains the source code for an interactive web portal utilized for group activities, publication dissemination, and bioinformatics tutorials (specifically tailored for `mothur` and Conda).
+The site is generated with Jekyll and published through GitHub Pages. Its documentation routes are written as Markdown, use reusable Jekyll layouts, and avoid external font dependencies so that pages open promptly in a new tab.
 
-## 🗂️ Repository Features
-- **Bioinformatics Tutorials:** Integrated screenshots and visual guides for tools like X2GO and Anaconda environments.
-- **IDRviewer Integration:** Embedded `idrviewer.js` and custom CSS for high-quality, fullscreen rendering of academic posters and technical PDFs directly in the browser.
-- **Group Activity Logs:** HTML modules detailing group research and published manuscripts.
+## Access the guide
 
+Visit the live project site at [nmabbasi.github.io/HPC](https://nmabbasi.github.io/HPC/).
 
-## 🚀 Access the Portal
+## Contact
 
-The website is actively deployed and hosted via GitHub Pages.
-
-👉 **[Click Here to Visit the Live Portal](https://nmabbasi.github.io/cnrs.github.io/)**
-
----
-
-## 📧 Contact
-**Nasir Mahmood Abbasi, PhD** | GitHub: [@nmabbasi](https://github.com/nmabbasi)
+For questions about the guide or reproducible workflow problems, contact [Nasir Mahmood Abbasi, PhD](mailto:nmabbasi@gmail.com).

@@ -1,32 +1,86 @@
 ---
 title: 'Support and troubleshooting'
-summary: 'Collect the right job details, log excerpts, and context before requesting technical support.'
+summary: 'Turn an HPC problem into a concise, reproducible support request with the information needed to resolve it.'
 step: '06'
 ---
-## Linux & Unix Mastery
 
-### Command Line Interface (CLI) & Scripting
+<section class="support-lead">
+  <p class="support-label">A practical support route</p>
+  <h2>Get unstuck with useful evidence</h2>
+  <p>Most HPC issues can be resolved much faster when the error, job details, environment, and expected result are captured together. Follow this short route before sending a request.</p>
+</section>
 
-**Text-based Tutorials:**
-<a href="http://swcarpentry.github.io/shell-novice/" target="_blank">Software Carpentry: The Unix Shell</a> — A foundational tutorial explaining the basics of the Unix-like shell, navigating the file system, utilizing basic commands, and writing simple scripts.
+<div class="support-grid" aria-label="Support triage steps">
+  <section class="support-card">
+    <p class="support-number">01</p>
+    <h3>Locate the failure</h3>
+    <p>Write down the exact command or job step that failed, together with the time it occurred and the result you expected.</p>
+  </section>
+  <section class="support-card">
+    <p class="support-number">02</p>
+    <h3>Capture the evidence</h3>
+    <p>Keep the job ID, full error message, relevant output files, and tool or environment version. Do not paraphrase an error when you can paste it.</p>
+  </section>
+  <section class="support-card">
+    <p class="support-number">03</p>
+    <h3>Send a focused request</h3>
+    <p>Explain what you tried, what happened, and what you need next. Remove passwords, access tokens, and restricted research data.</p>
+  </section>
+</div>
 
-**Video Masterclasses:**
-<a href="https://www.linkedin.com/learning/learning-linux-command-line-2" target="_blank">LinkedIn Learning: Linux Command Line</a> — Going through the full tutorial (~2.5 hours) is highly recommended. For a rapid start, the <a href="https://www.linkedin.com/learning/paths/north-carolina-state-university-linux-essentials-for-hpc?u=53565897&amp;auth=true" target="_blank">HPC Essentials Learning Path</a> provides 40 minutes of targeted instruction specifically for cluster environments like Henry2.
+## Capture the essentials
 
-**Practice Drill:**
-<a href="https://youtu.be/SYOANUvIg_A" target="_blank">Essential Linux Commands - Fluency Drill</a> — A focused session on executing basic commands rapidly, alongside understanding file and directory permissions (chmod/chown).
+For a Slurm job, begin with the scheduler record and the final lines of both output files. Replace the placeholder job ID and filenames with your own values.
 
-------------------------------------------------------------------------
+```bash
+squeue --job JOB_ID
+sacct --jobs JOB_ID --format=JobID,State,ExitCode,Elapsed,MaxRSS
+tail -n 40 job-output.out
+tail -n 40 job-error.err
+```
 
-### Command Line Text Editors
+For an environment or software problem, capture the executable and version after loading the modules or activating Conda.
 
-- **Vi / Vim:** Extremely powerful, modal text editor available on virtually every Linux system. <a href="https://www.linkedin.com/learning/learning-vim" target="_blank">Full Vim Tutorial</a> \| <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-vim" target="_blank">Quick Overview</a>
-- **Nano:** A simple, beginner-friendly text editor. Great for quick edits. <a href="https://www.linkedin.com/learning/learning-nano" target="_blank">Full Nano Tutorial</a> \| <a href="https://www.linkedin.com/learning/learning-linux-command-line-2/edit-text-with-nano" target="_blank">Quick Overview</a>
+```bash
+module list
+conda info
+which TOOL_NAME
+TOOL_NAME --version
+```
 
-------------------------------------------------------------------------
+## Use this request template
 
-## High Performance Computing (HPC)
+Copy this compact template into an email. A request with this context lets another researcher reproduce the problem without guessing about the command, system state, or intended output.
 
-### Foundational Concepts
+```text
+Subject: HPC Guide support request: short description
 
-<a href="https://epcced.github.io/hpc-intro/" target="_blank">Introduction to High-Performance Computing</a> — A specialized Software Carpentry curriculum tailored for understanding job schedulers (SLURM), nodes, resource allocation, and cluster architecture.
+Goal: What I am trying to run.
+Where it fails: Command or workflow step.
+Expected result: What I expected to happen.
+Observed result: Exact error or scheduler state.
+Job ID: If applicable.
+Environment: Modules, Conda environment, or tool version.
+What I already tried: Brief list of troubleshooting steps.
+Attachments: Relevant job script and small log excerpts only.
+```
+
+<section class="support-contact">
+  <div>
+    <p class="support-label">Contact route</p>
+    <h2>Send a concise support request</h2>
+    <p>Include the template above and only the smallest useful log excerpt. The contact route is intended for technical questions about the guidance, reproducible workflow problems, and document corrections.</p>
+  </div>
+  <a class="support-email" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request">Email nmabbasi@gmail.com <span aria-hidden="true">→</span></a>
+</section>
+
+## Resolve common issues first
+
+<div class="support-links">
+  <a href="{{ '/docs/connections/' | relative_url }}"><strong>Cannot connect?</strong><span>Recheck access, SSH syntax, and authentication.</span></a>
+  <a href="{{ '/docs/commands/' | relative_url }}"><strong>Command not found?</strong><span>Review paths, modules, and basic cluster commands.</span></a>
+  <a href="{{ '/docs/job-scripts/' | relative_url }}"><strong>Job failed or stayed pending?</strong><span>Inspect Slurm resources, state, and log files.</span></a>
+  <a href="{{ '/docs/conda/' | relative_url }}"><strong>Environment conflict?</strong><span>Check channels, activation, and the exported YAML file.</span></a>
+</div>
+
+> **Safe sharing rule:** never include passwords, private SSH keys, access tokens, participant information, or restricted research data in a support request.
