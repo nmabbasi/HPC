@@ -2,7 +2,7 @@
 
 - [x] Make the Get Support route explicit in primary navigation, route cards, and help actions.
 - [x] Add a clear support-link section that directs learners to the right guide before contacting support.
-- [ ] Validate and publish the revised Get Support navigation.
+- [x] Validate and publish the revised Get Support navigation.
 - [x] Identify every visible `CNRS` portal label, legacy Oliver contact email, and repository-origin reference.
 - [x] Replace portal branding with `HPC Guide` while preserving the existing documentation routes and Jekyll build.
 - [x] Replace the legacy contact email with the owner’s established email address.
