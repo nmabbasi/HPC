@@ -1,0 +1,12 @@
+- label: Overview
+  url: /
+- label: Connect
+  url: /docs/connections/
+- label: Commands
+  url: /docs/commands/
+- label: Job Scripts
+  url: /docs/job-scripts/
+- label: Conda
+  url: /docs/conda/
+- label: Support
+  url: /docs/support/

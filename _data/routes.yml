@@ -1,0 +1,30 @@
+- step: "01"
+  title: Connect securely
+  summary: Create an SSH key, configure your connection, and use graphical access where available.
+  url: /docs/connections/
+  tone: cyan
+- step: "02"
+  title: Learn the cluster basics
+  summary: Load modules, inspect partitions, monitor jobs, and request resources appropriately.
+  url: /docs/commands/
+  tone: blue
+- step: "03"
+  title: Submit a job
+  summary: Write a Slurm batch script, set resources, keep logs, and run work on compute nodes.
+  url: /docs/job-scripts/
+  tone: gold
+- step: "04"
+  title: Use Conda on the cluster
+  summary: Create isolated environments and use them consistently inside reproducible workflows.
+  url: /docs/conda/
+  tone: violet
+- step: "05"
+  title: Manage custom software
+  summary: Create user-maintained modules when an approved tool is not already available system-wide.
+  url: /docs/custom-modules/
+  tone: slate
+- step: "06"
+  title: Get support
+  summary: Use the right evidence, log excerpts, and job details to request help efficiently.
+  url: /docs/support/
+  tone: teal

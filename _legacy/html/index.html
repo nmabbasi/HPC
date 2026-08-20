@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Style reminder: Documentation-first CNRS HPC guide. Direct routes, calm institutional hierarchy, and minimal personal-profile emphasis. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CNRS HPC documentation for secure cluster access, Slurm job scripts, Conda environments, and bioinformatics research computing.">
+  <meta name="keywords" content="CNRS HPC, SLURM, cluster computing, bioinformatics, Conda, SSH">
+  <meta name="author" content="Nasir Mahmood Abbasi, PhD">
+  <title>CNRS HPC Guide | Bioinformatics Research Computing</title>
+  <link rel="icon" href="static/img/favicon.ico">
+  <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+  <link href="static/css/core.css" rel="stylesheet" media="screen">
+  <link href="static/css/omics-hpc.css" rel="stylesheet">
+</head>
+<body class="hpc-guide-page">
+  <header class="doc-header">
+    <div class="doc-header-inner">
+      <a class="doc-brand" href="index.html" aria-label="CNRS HPC Guide home">
+        <svg class="doc-brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="4" y="4" width="10" height="10" rx="1.5" fill="#58C7D1"></rect>
+          <rect x="18" y="4" width="10" height="10" rx="1.5" fill="#7F91AF"></rect>
+          <rect x="4" y="18" width="10" height="10" rx="1.5" fill="#E4A653"></rect>
+          <rect x="18" y="18" width="10" height="10" rx="1.5" fill="#EAF8FA"></rect>
+          <path d="M14 9h4M9 14v4M23 14v4M14 23h4" stroke="#EAF8FA" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+        <span><strong>CNRS HPC Guide</strong><small>Research computing documentation</small></span>
+      </a>
+      <nav class="doc-nav" aria-label="HPC guide navigation">
+        <a class="is-active" href="index.html">Overview</a>
+        <a href="connections.html">Connect</a>
+        <a href="BC.html">Commands</a>
+        <a href="ss.html">Job Scripts</a>
+        <a href="conda.html">Conda</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <section class="doc-intro" aria-labelledby="guide-title">
+      <div>
+        <p class="doc-kicker">Bioinformatics and high-performance computing</p>
+        <h1 id="guide-title">Find the next HPC step.</h1>
+        <p class="doc-lead">Use this guide to connect to the cluster, prepare a reproducible environment, submit work through Slurm, and obtain focused support when you need it.</p>
+      </div>
+      <aside class="doc-start-card" aria-label="Start here">
+        <span class="doc-start-number">01</span>
+        <div>
+          <strong>New to this HPC system?</strong>
+          <p>Begin by setting up your secure connection and SSH key.</p>
+          <a href="connections.html">Start with connection <span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="task-section" aria-labelledby="task-title">
+      <div class="section-heading">
+        <p class="doc-kicker">Choose a task</p>
+        <h2 id="task-title">Documentation by what you need to do</h2>
+      </div>
+      <div class="task-grid">
+        <article class="task-card task-card-cyan">
+          <span class="task-number">01</span>
+          <h3>Connect securely</h3>
+          <p>Create an SSH key, configure your connection, and use graphical access where available.</p>
+          <a href="connections.html">Connection guide <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="task-card task-card-blue">
+          <span class="task-number">02</span>
+          <h3>Learn the cluster basics</h3>
+          <p>Load modules, inspect partitions, monitor jobs, and request resources appropriately.</p>
+          <a href="BC.html">Basic commands <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="task-card task-card-gold">
+          <span class="task-number">03</span>
+          <h3>Submit a job</h3>
+          <p>Write a Slurm batch script, set resources, keep logs, and run work on compute nodes.</p>
+          <a href="ss.html">Job script guide <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="task-card task-card-violet">
+          <span class="task-number">04</span>
+          <h3>Use Conda on the cluster</h3>
+          <p>Create isolated environments and use them consistently inside reproducible workflows.</p>
+          <a href="conda.html">Conda guide <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="task-card task-card-neutral">
+          <span class="task-number">05</span>
+          <h3>Manage custom software</h3>
+          <p>Create user-maintained modules when an approved tool is not already available system-wide.</p>
+          <a href="CM.html">Custom modules <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="task-card task-card-neutral">
+          <span class="task-number">06</span>
+          <h3>Get support</h3>
+          <p>Use the right evidence, log excerpts, and job details to request help efficiently.</p>
+          <a href="support.html">Support resources <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-flow" aria-labelledby="flow-title">
+      <div class="section-heading">
+        <p class="doc-kicker">Recommended learning route</p>
+        <h2 id="flow-title">A simple route through the documentation</h2>
+      </div>
+      <ol class="flow-list">
+        <li><a href="connections.html"><span>1</span><strong>Access</strong><small>Set up SSH and confirm you can log in.</small></a></li>
+        <li><a href="BC.html"><span>2</span><strong>Orient</strong><small>Check modules, partitions, queues, and resource limits.</small></a></li>
+        <li><a href="ss.html"><span>3</span><strong>Compute</strong><small>Write a small Slurm job before scaling your analysis.</small></a></li>
+        <li><a href="conda.html"><span>4</span><strong>Reproduce</strong><small>Keep project software in an explicit Conda environment.</small></a></li>
+      </ol>
+    </section>
+
+    <aside class="doc-note">
+      <strong>Before running any job</strong>
+      <p>Use the cluster rules and host details supplied by your own institution. The examples in this guide show the workflow pattern, but site-specific partitions, hostnames, and access procedures can differ.</p>
+    </aside>
+  </main>
+
+  <footer class="doc-footer">
+    <div><strong>CNRS HPC Guide</strong><span>Practical documentation for bioinformatics research computing.</span></div>
+    <a href="support.html">Support and learning resources <span aria-hidden="true">→</span></a>
+  </footer>
+</body>
+</html>

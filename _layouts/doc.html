@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section class="doc-hero">
+  <div class="shell"><p class="eyebrow">HPC documentation</p><p class="doc-step">{{ page.step | default: 'Guide' }}</p><h1>{{ page.title }}</h1>{% if page.summary %}<p class="doc-summary">{{ page.summary }}</p>{% endif %}</div>
+</section>
+<div class="shell doc-shell">
+  <aside class="doc-side" aria-label="Documentation routes"><p>HPC routes</p>{% for route in site.data.routes %}<a href="{{ route.url | relative_url }}"{% if page.url == route.url %} aria-current="page"{% endif %}><span>{{ route.step }}</span>{{ route.title }}</a>{% endfor %}</aside>
+  <article class="doc-content">{{ content }}</article>
+</div>
+{% if page.next_url %}<section class="next-guide"><div class="shell"><p>Continue your route</p><a href="{{ page.next_url | relative_url }}"><span>{{ page.next_label }}</span><strong>{{ page.next_title }} <span aria-hidden="true">→</span></strong></a></div></section>{% endif %}

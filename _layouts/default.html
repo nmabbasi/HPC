@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="icon" href="{{ '/static/img/favicon.ico' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-shell">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="CNRS HPC Guide home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="4" y="4" width="10" height="10" rx="1.5" fill="#58C7D1"></rect><rect x="18" y="4" width="10" height="10" rx="1.5" fill="#7F91AF"></rect><rect x="4" y="18" width="10" height="10" rx="1.5" fill="#E4A653"></rect><rect x="18" y="18" width="10" height="10" rx="1.5" fill="#EAF8FA"></rect><path d="M14 9h4M9 14v4M23 14v4M14 23h4" stroke="#EAF8FA" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+          <span><strong>CNRS HPC Guide</strong><small>Research computing documentation</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><span aria-hidden="true">☰</span></button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          {% for item in site.data.navigation %}
+            {% assign item_url = item.url | relative_url %}
+            <a href="{{ item_url }}"{% if page.url == item_url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+    <main>{{ content }}</main>
+    <footer class="site-footer">
+      <div class="shell footer-shell"><div><strong>CNRS HPC Guide</strong><span>Practical documentation for bioinformatics research computing.</span></div><a href="{{ '/docs/support/' | relative_url }}">Support and learning resources <span aria-hidden="true">→</span></a></div>
+    </footer>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.site-nav');
+      if (toggle && nav) toggle.addEventListener('click', () => { const expanded = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!expanded)); nav.classList.toggle('is-open', !expanded); });
+    </script>
+  </body>
+</html>
