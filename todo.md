@@ -1,5 +1,10 @@
 # HPC Guide Publication Checklist
 
+- [x] Improve the side HPC route interaction and current-page clarity.
+- [x] Apply an accessible light-green active state to the top navigation and side route.
+- [x] Validate and publish the navigation-state refinement.
+
+Verification: the local side route moved from Conda to Software correctly, with the selected top tab and selected side route both shown in light green.
 - [x] Audit all six documentation routes for consistent navigation names and active-tab states.
 - [x] Restore a focused learning-resources section in Get Support without displacing direct help actions.
 - [x] Validate and publish the complete guide-wide navigation refinement.
