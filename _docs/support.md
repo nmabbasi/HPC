@@ -5,15 +5,15 @@ step: '06'
 ---
 
 <section class="support-lead">
-  <p class="support-label">A practical support route</p>
-  <h2>Get unstuck with useful evidence</h2>
-  <p>Most HPC issues can be resolved much faster when the error, job details, environment, and expected result are captured together. Follow this short route before sending a request.</p>
+  <p class="support-label">A practical learning route</p>
+  <h2>Turn errors into reusable knowledge</h2>
+  <p>HPC learning becomes much clearer when the error, job details, environment, and expected result are captured together. Follow this short route to understand a problem before asking for local account guidance.</p>
 </section>
 
-<nav class="support-actions" aria-label="Get Support actions">
-  <a class="support-action-primary" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request"><span>Direct contact</span><strong>Email: nmabbasi@gmail.com <span aria-hidden="true">→</span></strong></a>
-  <a class="support-action-secondary" href="#capture-the-essentials"><span>Before you contact</span><strong>Collect job details <span aria-hidden="true">↓</span></strong></a>
-</nav>
+<section class="support-actions" aria-label="Learning actions">
+  <div class="support-action-primary"><span>Guided practice</span><strong>Start with the evidence</strong></div>
+  <div class="support-action-secondary"><span>Learning habit</span><strong>Keep one small reproducible example</strong></div>
+</section>
 
 <div class="support-grid" aria-label="Support triage steps">
   <section class="support-card">
@@ -53,12 +53,12 @@ which TOOL_NAME
 TOOL_NAME --version
 ```
 
-## Use this request template
+## Use this learning checklist
 
-Copy this compact template into an email. A request with this context lets another researcher reproduce the problem without guessing about the command, system state, or intended output.
+Copy this compact template into your study notes. It helps you reproduce a problem without guessing about the command, system state, or intended output.
 
 ```text
-Subject: HPC Guide support request: short description
+Topic: Short description of the issue
 
 Goal: What I am trying to run.
 Where it fails: Command or workflow step.
@@ -72,33 +72,33 @@ Attachments: Relevant job script and small log excerpts only.
 
 <section class="support-contact">
   <div>
-    <p class="support-label">Contact route</p>
-    <h2>Send a concise support request</h2>
-    <p>Include the template above and only the smallest useful log excerpt. The contact route is intended for technical questions about the guidance, reproducible workflow problems, and document corrections.</p>
+    <p class="support-label">Local guidance</p>
+    <h2>Know what to ask for</h2>
+    <p>Use the checklist above to describe the issue clearly. For local accounts, access, or allocation policies, follow the process supplied for your own system.</p>
   </div>
-  <a class="support-email" href="mailto:nmabbasi@gmail.com?subject=HPC%20Guide%20support%20request">Email: nmabbasi@gmail.com <span aria-hidden="true">→</span></a>
+  <p class="support-email">Ask the <strong>administrator of University</strong></p>
 </section>
 
-## Choose the right support route
+## Choose the right learning focus
 
 <div class="support-links">
-  <a href="{{ '/docs/connections/' | relative_url }}"><strong>Connection support</strong><span>Recheck access, SSH syntax, and authentication.</span></a>
-  <a href="{{ '/docs/commands/' | relative_url }}"><strong>Command and module support</strong><span>Review paths, modules, and basic cluster commands.</span></a>
-  <a href="{{ '/docs/job-scripts/' | relative_url }}"><strong>Slurm job support</strong><span>Inspect resource requests, job state, and log files.</span></a>
-  <a href="{{ '/docs/conda/' | relative_url }}"><strong>Conda environment support</strong><span>Check channels, activation, and the exported YAML file.</span></a>
+  <section class="support-resource-card"><strong>Connection practice</strong><span>Review SSH keys, profile syntax, and safe authentication habits.</span></section>
+  <section class="support-resource-card"><strong>Command practice</strong><span>Review paths, modules, and basic cluster commands with short examples.</span></section>
+  <section class="support-resource-card"><strong>Slurm practice</strong><span>Inspect resource requests, job state, and log files after a small test run.</span></section>
+  <section class="support-resource-card"><strong>Conda practice</strong><span>Check activation, installed tools, and a reproducible environment description.</span></section>
 </div>
 
 <section class="learning-resources" aria-labelledby="learn-more-title">
   <div class="learning-resources-heading">
     <p class="support-label">Continue learning</p>
-    <h2 id="learn-more-title">Learn from trusted HPC and Linux resources</h2>
-    <p>Use these focused resources to strengthen your command-line foundations, text-editing skills, and understanding of shared research computing.</p>
+    <h2 id="learn-more-title">Build a focused HPC study routine</h2>
+    <p>Use these four self-contained study prompts to strengthen command-line foundations, reproducibility habits, and shared-computing concepts.</p>
   </div>
   <div class="learning-resource-grid">
-    <a href="https://swcarpentry.github.io/shell-novice/" target="_blank" rel="noopener noreferrer"><span class="resource-type">Interactive lesson</span><strong>Software Carpentry: The Unix Shell <span aria-hidden="true">↗</span></strong><small>Learn file navigation, shell commands, and small scripts through practical exercises.</small></a>
-    <a href="https://epcced.github.io/hpc-intro/" target="_blank" rel="noopener noreferrer"><span class="resource-type">HPC foundations</span><strong>Introduction to High-Performance Computing <span aria-hidden="true">↗</span></strong><small>Understand schedulers, nodes, resource requests, and the concepts behind cluster workflows.</small></a>
-    <a href="https://www.linkedin.com/learning/learning-linux-command-line-2" target="_blank" rel="noopener noreferrer"><span class="resource-type">Video course</span><strong>Linux Command Line <span aria-hidden="true">↗</span></strong><small>Build a structured command-line practice routine before running larger workflows.</small></a>
-    <a href="https://youtu.be/SYOANUvIg_A" target="_blank" rel="noopener noreferrer"><span class="resource-type">Practice drill</span><strong>Essential Linux Commands <span aria-hidden="true">↗</span></strong><small>Reinforce everyday commands and permissions through a concise practical session.</small></a>
+    <article class="learning-resource-card"><span class="resource-type">Practice 01</span><strong>Navigate and inspect</strong><small>Practise pwd, ls, cd, mkdir, and file permissions in a scratch directory until each command feels predictable.</small></article>
+    <article class="learning-resource-card"><span class="resource-type">Practice 02</span><strong>Run a tiny job</strong><small>Submit the smallest possible scheduler task, inspect its output, then change one resource request at a time.</small></article>
+    <article class="learning-resource-card"><span class="resource-type">Practice 03</span><strong>Record your environment</strong><small>Write down your shell, modules, Conda environment, tool version, and command before running a workflow.</small></article>
+    <article class="learning-resource-card"><span class="resource-type">Practice 04</span><strong>Explain one error</strong><small>Keep a short error journal: what you ran, what happened, what changed, and what you learned from the retry.</small></article>
   </div>
 </section>
 

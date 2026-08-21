@@ -1,129 +1,82 @@
 ---
 title: 'Secure cluster connection'
-summary: 'Set up SSH keys, connect from Linux, macOS, or Windows, and use graphical access when available.'
+summary: 'Learn the SSH concepts and connection habits used across managed research-computing systems.'
 step: '01'
 next_label: 'Next step'
 next_title: 'Learn the cluster basics'
 next_url: '/docs/commands/'
 ---
-## <span class="header-section-number"></span> SSH keys
 
-Access is not available with a password, only with SSH keys. In short. We create a pair of keys, one public, one private. The public key is saved on the login node and the private key stays on the user’s host. Connection only works if private and public keys match.
+## SSH keys
 
-## <span class="header-section-number"></span> Linux / mac
+Managed research-computing systems normally use SSH keys instead of passwords. A key pair has two parts: a public key that can be shared with the system and a private key that must remain on your own computer. Connection works only when the two keys match.
 
-### <span class="header-section-number"></span> Generating a pair of keys
+## Linux / mac
 
-The following command may require a package install. It’s called *openssh-client* on debian/ubuntu. Also *esmeralda* is the name of the key. You can name it whatever you want, but you have to stay consistent with the *config* file (few sections below).
+### Create a key pair
 
-    ssh-keygen -t rsa -f esmeralda
+Run the following command in a terminal. The filename is a local label, so you can choose another clear name if you use it consistently.
 
-This asks for a *passphrase* twice and creates 2 files: *esmeralda* and *esmeralda.pub*. The first one is the private key, the second one is the public key.
+```bash
+ssh-keygen -t ed25519 -f research_cluster
+```
 
-### <span class="header-section-number"></span> What to do with the keys
+The command creates `research_cluster`, the private key, and `research_cluster.pub`, the public key. Add a passphrase when prompted so that the private key is protected if your computer is lost or shared.
 
-Send only the public key to the Administrator of University. Keep the public key somewhere, for example in *~/.ssh/*.
+### Share the public key safely
 
-The private key must be in the *~/.ssh/* folder (which must be created if it does not exist). Note that every host destined to connect to the cluster will require this private key (along with the *config* file, see below).
+Before connecting to a managed cluster, ask the **administrator of University** how public keys are accepted for that system. Share only the `.pub` file. Never share the private key, your passphrase, passwords, or access tokens.
 
-### <span class="header-section-number"></span> Connecting with SSH
+Keep the private key in `~/.ssh/` with restricted permissions. A useful check is:
 
-If you want to run graphical applications from outside the university’s network, see [Connecting with NX](#connecting-with-nx). If you’re not a console enthusiast and wish to have a graphical desktop, also see [Connecting with NX](#connecting-with-nx).
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/research_cluster
+```
 
-#### <span class="header-section-number"></span> From inside the university’s network
+### Build a reusable connection profile
 
-Add these lines to the *~/.ssh/config* file, replacing *LOGIN* by the login name the administrator gave you:
+Most SSH clients read connection profiles from `~/.ssh/config`. Replace the placeholders with the host name and user name provided for your own learning environment.
 
-    Host esmeralda
-            Hostname 10.195.17.215
-            User LOGIN
-            IdentityFile ~/.ssh/esmeralda
+```text
+Host research-cluster
+    HostName CLUSTER_HOSTNAME
+    User USER_NAME
+    IdentityFile ~/.ssh/research_cluster
+```
 
-Explanations. What is given on the *Host* line is an alias, and the options that follow this line will only be used if the alias is recognized by *ssh*. So this will work:
+You can then connect with a short command:
 
-        ssh esmeralda
+```bash
+ssh research-cluster
+```
 
-But the following will **not** work, because the *IdentityFile* option will not be used:
+### Learn the access workflow
 
-        ssh LOGIN@10.195.17.215
+Every research-computing system has its own account, network, and authentication rules. Read the local access instructions supplied by your institution, then practise the sequence in a small test environment before transferring research data or starting a large job.
 
-The alias *esmeralda* can be changed to anything you want. The *IdentityFile* line tells *ssh* to connect using the given private key.
+If the connection fails, record the exact command, the complete error message, and the point at which it occurs. This evidence is more useful than a screenshot alone when you review the problem or ask for help.
 
-#### <span class="header-section-number"></span> From outside the university’s network
+## Windows
 
-Request VPN access from the Administrator of University, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
+### Create a key pair
 
-If you are anti-*gnome* or anti-*network-manager*, you can also
+Use an SSH client that can create and manage keys. Create an `ed25519` key pair, set a passphrase, and store the private key in a protected folder. The public key normally ends with `.pub`.
 
-- install *openvpn*,
+### Configure a connection
 
-- download the configuration files at the address above,
+Enter the host name, user name, and private-key location supplied for your own system. Save the profile with a meaningful name such as `research-cluster`. Do not copy credentials from another learner or reuse a private key that belongs to someone else.
 
-- extract the archive and move inside (with *cd*),
+### Test deliberately
 
-- give yourself root privileges and run:
+Make one connection attempt before moving files or launching software. Confirm the remote prompt, check your working directory with `pwd`, and exit cleanly with `exit`. This small practice loop helps you distinguish an access issue from a later software or scheduler problem.
 
-  openvpn vpn-univ-TCP-443.ovpn
+## Connection learning checklist
 
-Once connected, refer to the previous section.
+1. Create one protected key pair.
+2. Share only the public key through the local process.
+3. Save a reusable profile with placeholders replaced.
+4. Test one short SSH session.
+5. Record the command and error text if something fails.
 
-## <span class="header-section-number"></span> Windows
-
-Download [*MobaXterm*](https://download.mobatek.net/1102018093083521/MobaXterm_Installer_v11.0.zip) and install it.
-
-### <span class="header-section-number"></span> Generating a pair of keys
-
-Run *MobaXterm*, click on *Start local terminal* and run:
-
-    ssh-keygen -t rsa -f esmeralda
-
-<img src="{{ '/M1.png' | relative_url }}" width="1000" height="1100" alt="MobXterm" />
-
-This asks for a *passphrase* twice and creates 2 files: *esmeralda* and *esmeralda.pub*. The first one is the private key, the second one is the public key. These two files must be in the *C:\Users\XXX\Documents\MobaXterm\home\\* (*XXX* being your user name) folder.
-
-### <span class="header-section-number"></span> What to do with the keys
-
-Send only the public key to the Administrator of University. Keep the keys where they are.
-
-Note that every host destined to connect to the cluster will require this private key.
-
-### <span class="header-section-number"></span> Connecting with SSH
-
-If you want to run graphical applications from outside the university’s network, see [Connecting with NX](#connecting-with-nx). If you’re not a console enthusiast and wish to have a graphical desktop, also see [Connecting with NX](#connecting-with-nx).
-
-#### <span class="header-section-number"></span> From inside the university’s network
-
-In the *MobaXterm* window.
-
-- Click on *Session* (upper left corner), then *SSH* (same),
-- Fill the *Remote Host* field with *10.195.17.215*.
-- Tick the *Specify username* box and write the login name the administrator gave you.
-- In the *Advanced SSH settings* tab, tick the *Use private key* box and set its location.
-- Click *OK*.
-- A new session should appear in the left panel, double-click it to connect.
-
-#### <span class="header-section-number"></span> From outside the university’s network
-
-Request VPN access from the Administrator of University, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
-
-Once connected, refer to the previous section.
-
-### <span class="header-section-number"></span> File transfer
-
-Once connected with *MobaXterm*, one can drag and drop files in the left panel.
-
-## <span class="header-section-number"></span> Connecting with NX
-
-Install *x2goclient*. It may be a package for your linux/mac distribution, or it can be downloaded (also for windows) [here](https://wiki.x2go.org/doku.php/download:start).
-
-- Click on *Session*, then *New session…*.
-- Change *Session name* if you want.
-- Write 10.195.17.215 in the *Host* field.
-- Fille the *Login* field.
-- Set the location of your private key in the *Use RSA/DSA key for ssh connection* field.
-- In the *Session type* box, either choose
-  - *XFCE* for a graphical desktop,
-  - *Single application*, then *Terminal* in the right drop-down menu.
-- Click *Ok*. The session should appear in the right panel. Click on it to connect.
-
-If you are outside the university’s network, you must first connect to the VPN (see [linux/mac](#depuis-lextérieur-du-réseau) or [windows](#depuis-lextérieur-du-réseau-1)).
+> **Safe practice rule:** never publish private SSH keys, passphrases, passwords, access tokens, participant information, or restricted research data.

@@ -86,7 +86,7 @@ There are two ways to run tasks on nodes: submit a job (section [Submitting a jo
 
 In all other cases, it is better to submit a job script. The reason is that you need to allocate resources when starting an interactive session. By nature, there is usually downtime in interactive sessions (modifying scripts/programs, or not realising that the task has completed and letting it idle), and during this downtime, the resources you allocated and are currently not using are also unavailable to the other cluster users.
 
-If you struggle with the script, send an email to *yann.jullian<span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>* and use an interactive session in the meantime.
+If a practice script fails, keep the exact command, scheduler state, and error output. Review those details against the job-script guide before retrying with a smaller test job.
 
 ## <span class="header-section-number"></span> Running an interactive session
 

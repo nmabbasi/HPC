@@ -1,10 +1,17 @@
 # HPC Guide Publication Checklist
 
+- [x] Find University of Tours, VPN, and external institution links in active HPC learning guides.
+- [x] Replace the contact wording with bold lowercase `administrator of University`.
+- [x] Rewrite connection guidance as neutral learning-resource content without university or VPN links.
+- [ ] Publish and verify the neutralized live HPC learning pages.
+
 - [x] Find every remaining `olivier.thibault@univ-tours.fr` reference in the HPC Guide source.
 - [x] Replace each visible legacy-email reference with `Administrator of University`.
 - [x] Publish and verify that the live HPC Guide contains no legacy email reference.
 
 Deployment verification: GitHub Pages deployment run `32459384492` completed successfully for commit `48fee939a42c89fc3b3c149c263a50f9fb82256e`. The refreshed live connections guide shows `Administrator of University` for public-key and VPN access instructions, with no Olivier Thibault email visible. The live questions and requests page also now directs readers to the Administrator of University.
+
+Learning-resource validation: the rebuilt active connection, command, questions, and support guides contain no University of Tours, VPN, mail, or external web destinations. The highlighted `administrator of University` wording renders as bold text in the local build.
 
 - [ ] Replace the HPC Guide link in the LinkedIn Company Page post with `https://theomicshub.com/`.
 - [x] Verify the corrected Company Page post displays the main Omics Hub website destination.
