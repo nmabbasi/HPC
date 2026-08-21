@@ -1,5 +1,9 @@
 # HPC Guide Publication Checklist
 
+- [x] Improve the local administrator guidance in the Get Support page.
+- [x] Restore selected reputable external learning resources without University of Tours, VPN, or institutional contact links.
+- [ ] Publish and verify the revised support learning-resource page.
+
 - [x] Find University of Tours, VPN, and external institution links in active HPC learning guides.
 - [x] Replace the contact wording with bold lowercase `administrator of University`.
 - [x] Rewrite connection guidance as neutral learning-resource content without university or VPN links.
@@ -14,6 +18,8 @@ Deployment verification: GitHub Pages deployment run `32459384492` completed suc
 Learning-resource validation: the rebuilt active connection, command, questions, and support guides contain no University of Tours, VPN, mail, or external web destinations. The highlighted `administrator of University` wording renders as bold text in the local build.
 
 Live verification: GitHub Pages deployment run `32460252632` completed successfully for commit `1218b337541171d5734f8dc6a2dea3dc11fed46b`. The live connection guide is a self-contained SSH learning lesson, and the live support guide now provides self-contained study prompts with bold `administrator of University` guidance.
+
+External-resource validation: the rebuilt support page contains the refined instruction “Contact the administrator of University responsible for your system.” and links only to Software Carpentry, HPC Carpentry, official Conda documentation, and official Slurm documentation. No University of Tours, VPN, or institutional contact destination remains.
 
 - [ ] Replace the HPC Guide link in the LinkedIn Company Page post with `https://theomicshub.com/`.
 - [x] Verify the corrected Company Page post displays the main Omics Hub website destination.

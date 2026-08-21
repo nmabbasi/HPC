@@ -76,7 +76,7 @@ Attachments: Relevant job script and small log excerpts only.
     <h2>Know what to ask for</h2>
     <p>Use the checklist above to describe the issue clearly. For local accounts, access, or allocation policies, follow the process supplied for your own system.</p>
   </div>
-  <p class="support-email">Ask the <strong>administrator of University</strong></p>
+  <p class="support-email"><span>Local access questions</span><strong>Contact the administrator of University responsible for your system.</strong></p>
 </section>
 
 ## Choose the right learning focus
@@ -92,13 +92,13 @@ Attachments: Relevant job script and small log excerpts only.
   <div class="learning-resources-heading">
     <p class="support-label">Continue learning</p>
     <h2 id="learn-more-title">Build a focused HPC study routine</h2>
-    <p>Use these four self-contained study prompts to strengthen command-line foundations, reproducibility habits, and shared-computing concepts.</p>
+    <p>Use these reputable external lessons to deepen your command-line foundations, scheduler understanding, and reproducibility habits. Local access and account rules always come from your own system.</p>
   </div>
   <div class="learning-resource-grid">
-    <article class="learning-resource-card"><span class="resource-type">Practice 01</span><strong>Navigate and inspect</strong><small>Practise pwd, ls, cd, mkdir, and file permissions in a scratch directory until each command feels predictable.</small></article>
-    <article class="learning-resource-card"><span class="resource-type">Practice 02</span><strong>Run a tiny job</strong><small>Submit the smallest possible scheduler task, inspect its output, then change one resource request at a time.</small></article>
-    <article class="learning-resource-card"><span class="resource-type">Practice 03</span><strong>Record your environment</strong><small>Write down your shell, modules, Conda environment, tool version, and command before running a workflow.</small></article>
-    <article class="learning-resource-card"><span class="resource-type">Practice 04</span><strong>Explain one error</strong><small>Keep a short error journal: what you ran, what happened, what changed, and what you learned from the retry.</small></article>
+    <a class="learning-resource-card" href="https://swcarpentry.github.io/shell-novice/" target="_blank" rel="noopener noreferrer"><span class="resource-type">Foundation lesson</span><strong>Software Carpentry: The Unix Shell <span aria-hidden="true">↗</span></strong><small>Build confidence with navigation, files, permissions, and small shell scripts.</small></a>
+    <a class="learning-resource-card" href="https://www.hpc-carpentry.org/hpc-shell/" target="_blank" rel="noopener noreferrer"><span class="resource-type">HPC workflow</span><strong>HPC Carpentry: Using the Shell <span aria-hidden="true">↗</span></strong><small>Learn how command-line skills connect to shared research-computing workflows.</small></a>
+    <a class="learning-resource-card" href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html" target="_blank" rel="noopener noreferrer"><span class="resource-type">Environment management</span><strong>Conda: Getting Started <span aria-hidden="true">↗</span></strong><small>Learn to create isolated environments, inspect them, and install packages reproducibly.</small></a>
+    <a class="learning-resource-card" href="https://slurm.schedmd.com/documentation.html" target="_blank" rel="noopener noreferrer"><span class="resource-type">Scheduler reference</span><strong>Slurm: User Documentation <span aria-hidden="true">↗</span></strong><small>Explore job states, commands, resource requests, and scheduler concepts from the official reference.</small></a>
   </div>
 </section>
 
