@@ -3,7 +3,7 @@
 - [x] Find University of Tours, VPN, and external institution links in active HPC learning guides.
 - [x] Replace the contact wording with bold lowercase `administrator of University`.
 - [x] Rewrite connection guidance as neutral learning-resource content without university or VPN links.
-- [ ] Publish and verify the neutralized live HPC learning pages.
+- [x] Publish and verify the neutralized live HPC learning pages.
 
 - [x] Find every remaining `olivier.thibault@univ-tours.fr` reference in the HPC Guide source.
 - [x] Replace each visible legacy-email reference with `Administrator of University`.
@@ -12,6 +12,8 @@
 Deployment verification: GitHub Pages deployment run `32459384492` completed successfully for commit `48fee939a42c89fc3b3c149c263a50f9fb82256e`. The refreshed live connections guide shows `Administrator of University` for public-key and VPN access instructions, with no Olivier Thibault email visible. The live questions and requests page also now directs readers to the Administrator of University.
 
 Learning-resource validation: the rebuilt active connection, command, questions, and support guides contain no University of Tours, VPN, mail, or external web destinations. The highlighted `administrator of University` wording renders as bold text in the local build.
+
+Live verification: GitHub Pages deployment run `32460252632` completed successfully for commit `1218b337541171d5734f8dc6a2dea3dc11fed46b`. The live connection guide is a self-contained SSH learning lesson, and the live support guide now provides self-contained study prompts with bold `administrator of University` guidance.
 
 - [ ] Replace the HPC Guide link in the LinkedIn Company Page post with `https://theomicshub.com/`.
 - [x] Verify the corrected Company Page post displays the main Omics Hub website destination.
