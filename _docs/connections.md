@@ -22,7 +22,7 @@ This asks for a *passphrase* twice and creates 2 files: *esmeralda* and *esmeral
 
 ### <span class="header-section-number"></span> What to do with the keys
 
-Send only the public key to one of the administrators: *olivier.thibault<span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>*. Keep the public key somewhere, for example in *~/.ssh/*.
+Send only the public key to the Administrator of University. Keep the public key somewhere, for example in *~/.ssh/*.
 
 The private key must be in the *~/.ssh/* folder (which must be created if it does not exist). Note that every host destined to connect to the cluster will require this private key (along with the *config* file, see below).
 
@@ -51,7 +51,7 @@ The alias *esmeralda* can be changed to anything you want. The *IdentityFile* li
 
 #### <span class="header-section-number"></span> From outside the university’s network
 
-Request VPN access to *olivier.thibault<span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>*, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
+Request VPN access from the Administrator of University, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
 
 If you are anti-*gnome* or anti-*network-manager*, you can also
 
@@ -83,7 +83,7 @@ This asks for a *passphrase* twice and creates 2 files: *esmeralda* and *esmeral
 
 ### <span class="header-section-number"></span> What to do with the keys
 
-Send only the public key to one of the administrators: *olivier.thibault<span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>*. Keep the keys where they are.
+Send only the public key to the Administrator of University. Keep the keys where they are.
 
 Note that every host destined to connect to the cluster will require this private key.
 
@@ -104,7 +104,7 @@ In the *MobaXterm* window.
 
 #### <span class="header-section-number"></span> From outside the university’s network
 
-Request VPN access to *olivier.thibault<span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>*, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
+Request VPN access from the Administrator of University, then follow the instructions given [here](https://intranet.univ-tours.fr/ressources/direction-des-systemes-d-information/acces-a-distance-securise-vpn--477933.kjsp?RH=INTRANET).
 
 Once connected, refer to the previous section.
 

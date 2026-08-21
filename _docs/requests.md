@@ -7,4 +7,4 @@ HOWTO
 
 ## <span class="header-section-number"></span> Questions / requests
 
-Send an email to *olivier.thibault <span style="display:none">foo</span><span class="citation" cites="univ-tours.fr">@univ-tours.fr</span>*.
+For questions or requests, contact the Administrator of University.
