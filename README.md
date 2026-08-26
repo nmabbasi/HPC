@@ -11,3 +11,15 @@ Visit the live project site at [nmabbasi.github.io/HPC](https://nmabbasi.github.
 ## Contact
 
 For questions about the guide or reproducible workflow problems, contact [Nasir Mahmood Abbasi](mailto:nmabbasi@gmail.com).
+
+The website is actively deployed and hosted via GitHub Pages.
+
+👉 **[Click Here to Visit the Live Portal](https://nmabbasi.github.io/cnrs.github.io/)**
+
+---
+
+## 📧 Contact & Author
+
+**Nasir Mahmood Abbasi**  
+💻 GitHub: [@nmabbasi](https://github.com/nmabbasi)  
+📧 Email: [nmabbasi@gmail.com](mailto:nmabbasi@gmail.com)
