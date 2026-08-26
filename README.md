@@ -23,3 +23,4 @@ The website is actively deployed and hosted via GitHub Pages.
 **Nasir Mahmood Abbasi**  
 💻 GitHub: [@nmabbasi](https://github.com/nmabbasi)  
 📧 Email: [nmabbasi@gmail.com](mailto:nmabbasi@gmail.com)
+📧 Email: [nmabbasi@gmail.com](mailto:nmabbasi@gmail.com)
