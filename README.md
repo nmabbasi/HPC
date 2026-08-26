@@ -10,4 +10,4 @@ Visit the live project site at [nmabbasi.github.io/HPC](https://nmabbasi.github.
 
 ## Contact
 
-For questions about the guide or reproducible workflow problems, contact [Nasir Mahmood Abbasi, PhD](mailto:nmabbasi@gmail.com).
+For questions about the guide or reproducible workflow problems, contact [Nasir Mahmood Abbasi](mailto:nmabbasi@gmail.com).
