@@ -22,7 +22,7 @@ will give you all possible options/commands. Here are the most important.
 
 lists all available modules.
 
-<img src="{{ '/MA.png' | relative_url }}" width="1500" height="1500" alt="MobXterm" />
+<img src="{{ '/assets/images/MA.png' | relative_url }}" width="1500" height="1500" alt="MobXterm" />
 
     module list
 
