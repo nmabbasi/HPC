@@ -26,13 +26,32 @@ Read the online documentation at: **[https://nmabbasi.github.io/HPC/](https://nm
 
 ## Running Locally
 
-The site is built with Jekyll. To preview it locally:
+The site is built with Jekyll using the official `github-pages` gem. Because `baseurl: /HPC` is configured in `_config.yml`, pages and stylesheet assets are served under the `/HPC/` path.
+
+### Option 1: Using Bundler (Standard)
+
+Prerequisites: Ruby and Bundler installed.
 
 ```bash
+# Install dependencies from Gemfile
 bundle install
+
+# Start the local development server
 bundle exec jekyll serve
 ```
-Then navigate to `http://localhost:4000/HPC/`.
+Open **`http://localhost:4000/HPC/`** in your browser (the `/HPC/` subpath matches the repository site configuration).
+
+To preview the site directly at the root (`http://localhost:4000/`), override the base URL flag:
+```bash
+bundle exec jekyll serve --baseurl ""
+```
+
+### Option 2: Using Docker (No Ruby installation required)
+
+```bash
+docker run --rm -it -v "$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll jekyll serve
+```
+Open **`http://localhost:4000/HPC/`** in your browser.
 
 ---
 
