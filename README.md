@@ -58,7 +58,7 @@ Open **`http://localhost:4000/HPC/`** in your browser.
 ## Author
 
 **Nasir Mahmood Abbasi, PhD**  
-Computational Biologist • Open to New Opportunities  
+Computational Biologist | Open to New Opportunities  
 - Portfolio: [nmabbasi.github.io](https://nmabbasi.github.io/)  
 - GitHub: [@nmabbasi](https://github.com/nmabbasi)  
 - Email: [nmabbasi@gmail.com](mailto:nmabbasi@gmail.com)
